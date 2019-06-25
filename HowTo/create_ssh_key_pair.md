@@ -18,7 +18,7 @@ Note:
 
 ## Check for existing SSH keys
 
-Use this command to list all existing ssh keys: `ls -al ~/.ssh`
+Use this command to list all existing SSH keys: `ls -al ~/.ssh`
 Follow this article for more details: https://help.github.com/en/articles/checking-for-existing-ssh-keys
 
 
@@ -32,7 +32,7 @@ ssh-keygen -f ~/.ssh/id_rsa_<file-name> -t rsa -b 4096 -C "your.email.id@your_em
 + **Step-2**  
 You will be prompted for a `passphrase`. Just press **`enter`** to proceed without a passphrase.
 ---
-For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs with rsa algorithm with key-size of `4096`, and you would like to name your ssh key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/) and when prompted for a `passphrase`, just press **`enter`** to proceed without a passphrase. 
+For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs using `rsa` algorithm with key-size of `4096`, and you would like to name your SSH key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/) and when prompted for a `passphrase`, just press **`enter`** to proceed without a passphrase. 
 
 ```console
 ssh-keygen -f ~/.ssh/id_rsa_colab -t rsa -b 4096 -C "john.doe@gmail.com"

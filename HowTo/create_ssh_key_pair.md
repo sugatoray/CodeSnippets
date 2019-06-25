@@ -1,6 +1,20 @@
-# How to create SSH public-private key-pair
+# How to enable SSH authentication between Colab and GitHub for private repositories.
+This document will lay out the steps you need to take to create an SSH key-pair, followed by the steps necessary to establish the SSH authentication between Colab and GitHub for private repositories.
 
-This document will lay out the steps you need to take to create an SSH key-pair.
+## A note to the reader
+I started putting together this document with the intent to enable SSH based authentication between Colab and GitHub for private repositories. The steps involved are:  
+1. Check for existing SSH keys. `DONE`
+1. Create SSH public-private key-pair. `DONE`
+1. Create a `.config` file in directory with only the key-pair files in it and gzip it. `TESTED` 
+   => But have not written down the exact process here. `PENDING`
+1. Upload the gzipped file to Colab. `TESTED`
+1. Run script to set colab environment with the public-private key-pair. `PENDING`
+1. Save the `public-key` in GitHub. `PENDING`
+1. Test if it worked. `PENDING`
+
+Note: 
++ I mostly followed [this document](https://techsupportallbugs.wordpress.com/2018/06/05/using-git-with-colab-via-ssh/) to implement these steps. There is also a [similar article available on Medium.com](https://towardsdatascience.com/using-git-with-colab-via-ssh-175e8f3751ec) by the same author. 
++ At this point I am not sure if this is a once-only activity or you need to run it everytime you fire up a new Colab VM. I plan on testing and documenting it. My ultimate goal with this document is to make Colab-GitHub SSH integeration as simple as possible. Worst-case-scenario: I would run a colab-script every time I open up a Colab VM and access my SSH key-pair from a predefined location on my Google Drive (and avoid uploading the SSH key-pair every time).
 
 ## Check for existing SSH keys
 
@@ -10,11 +24,15 @@ Follow this article for more details: https://help.github.com/en/articles/checki
 
 ## Create SSH public-private key-pair
 
++ **Step-1**  
 You can create an rsa key-pair with the following single line command. Run it in PuTTy, Git Bash, CygWin, etc.
 ```console
 ssh-keygen -f ~/.ssh/id_rsa_<file-name> -t rsa -b 4096 -C "your.email.id@your_email.com"
 ```
-For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs with rsa algorithm with key-size of `4096`, and you would like to name your ssh key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/) and when prompted for a `passphrase`, just press <font color='red'>`enter`</font> to proceed without a passphrase. 
++ **Step-2**  
+You will be prompted for a `passphrase`. Just press **`enter`** to proceed without a passphrase.
+---
+For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs with rsa algorithm with key-size of `4096`, and you would like to name your ssh key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/) and when prompted for a `passphrase`, just press **`enter`** to proceed without a passphrase. 
 
 ```console
 ssh-keygen -f ~/.ssh/id_rsa_colab -t rsa -b 4096 -C "john.doe@gmail.com"

@@ -14,7 +14,7 @@ You can create an rsa key-pair with the following single line command. Run it in
 ```console
 ssh-keygen -f ~/.ssh/id_rsa_<file-name> -t rsa -b 4096 -C "your.email.id@your_email.com"
 ```
-For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs with rsa algorithm with key-size of `4096`, and you would like to name your ssh key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/):  
+For example, if your email is `john.doe@gmail.com` and you want to create SSH key-pairs with rsa algorithm with key-size of `4096`, and you would like to name your ssh key-pairs `id_rsa_colab`, you could do that by running the following command from [Git Bash](https://gitforwindows.org/) and when prompted for a `passphrase`, just press <font color='red'>`enter`</font> to proceed without a passphrase. 
 
 ```console
 ssh-keygen -f ~/.ssh/id_rsa_colab -t rsa -b 4096 -C "john.doe@gmail.com"

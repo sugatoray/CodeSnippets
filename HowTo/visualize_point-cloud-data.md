@@ -112,7 +112,8 @@ visualizer.show()
 
 ---
 ## Stackoverflow 
-1. Stackoverflow Question: [Python - Display 3D Point Cloud [closed]](https://stackoverflow.com/questions/50965673/python-display-3d-point-cloud)
+1. Stackoverflow Question: [Python - Display 3D Point Cloud [closed]](https://stackoverflow.com/questions/50965673/python-display-3d-point-cloud).  
+
 **Install open3d.**
 ```
 pip install open3d

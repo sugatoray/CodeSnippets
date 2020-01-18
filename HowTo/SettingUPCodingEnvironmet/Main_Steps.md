@@ -102,14 +102,14 @@ Refer to these articles and videos to setup VSCode as you like. You may choose t
 1. [Path Intellisense _by_ Christian Kohler](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 1. [neuron _by_ neuron](https://marketplace.visualstudio.com/items?itemName=neuron.neuron-IPE)
 1. [SandDance for VSCode _by_ Microsoft DevLabs](https://marketplace.visualstudio.com/items?itemName=msrvida.vscode-sanddance)
-1. [Sublime Text Keymap and Settings Importer_by_Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings)
+1. [Sublime Text Keymap and Settings Importer _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings)
 1. [Instant Markdown _by_ David Bankier](https://marketplace.visualstudio.com/items?itemName=dbankier.vscode-instant-markdown)
 1. [LaTeX Workshop _by_ James Yu](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 1. [Markdown PDF _by_ yzane](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
 1. [Image preview _by_ Kiss Tamás](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)
 1. [Bookmarks _by_ Alessandro Fragnani](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
 1. [Material Theme Kit _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Theme-MaterialKit)
-1. [GitHub Pull Requests _by_ GitHub _[Preview]](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+1. [GitHub Pull Requests _by_ GitHub _[Preview]_](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
 ## Accessing WSL-Ubuntu or Remote Server (Linux) with VSCode
 The setup procedure is quite simple and there is nice documentation available as well.  

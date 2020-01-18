@@ -142,4 +142,6 @@ The setup procedure is quite simple and there is nice documentation available as
 1. [PowerShell says “execution of scripts is disabled on this system.”](https://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system) `-->` `powershell -ExecutionPolicy Bypass -File script.ps1`.
 1. [How to Access Your Ubuntu Bash Files in Windows (and Your Windows System Drive in Bash)](https://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/)
 1. [How to Use Zsh (or Another Shell) in Windows 10](https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/) `-->` `wsl zsh` in `cmd`.
-
+1. [oh-my-zsh: github-repo](https://github.com/ohmyzsh/ohmyzsh)
+1. [Miniconda Installer Download Page](https://docs.conda.io/en/latest/miniconda.html)
+1. [...](...)

@@ -33,12 +33,12 @@ have to _**install** the necessary fonts_ on your **Windows 10 PC**.
   1. Navigate to your desired directory where you would like to 
   download the fonts from GitHub. And issue the following lines 
   of command in the powershell window.  
-  <p style="font-size:6px">
-  _Suggestion_: maintain a folder `"GitHub"` for all the github 
+  
+  >_Suggestion_: maintain a folder `"GitHub"` for all the github 
   repositories that you would download or work on. Each such repo 
   will have its own folder under GitHub. This will make maintenance 
   easire later on.
-  </p>  
+   
   
   ```bash
   git clone https://github.com/powerline/fonts.git
@@ -65,15 +65,15 @@ tar -zxvf <doenload_link_miniconda3_py37>
 1. Abhishek Thakur's Video: Setting up Environment
 (_python_, _zsh_ and _oh-my-zsh_) [YouTube Video](https://www.youtube.com/watch?v=N9lo_UxSkWA)
 1. Official VSCode Plugin for WSL and Remote Server - Guide:  
-  + [How to use VSCode Plugin for WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
-  + [How to use VSCode Plugin for Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
+   + [How to use VSCode Plugin for WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
+   + [How to use VSCode Plugin for Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
 1. SSH Client Related:  
-  1. [Installing a supported SSH Client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)
-  1. [Installing the Windows OpenSSH Client]()
-  > To install **`OpenSSH`** on Windows 10: 
-    1. start `Settings` then go to `Apps` > `Apps and Features` > `Manage Optional Features`.  
-    1. Scan this list to see if OpenSSH client is already installed. If not, then 
-      + at the top of the page select **`Add a feature`**.
-      + locate **OpenSSH Client**, then click **`Install`**.
+  4.1. [Installing a supported SSH Client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)  
+  4.2. [Installing the Windows OpenSSH Client]()  
+  > To install **`OpenSSH`** on Windows 10:  
+      A. start `Settings` then go to `Apps` > `Apps and Features` > `Manage Optional Features`.  
+      B. Scan this list to see if OpenSSH client is already installed. If not, then  
+         + at the top of the page select **`Add a feature`**.  
+         + locate **OpenSSH Client**, then click **`Install`**.  
 
 

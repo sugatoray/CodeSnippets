@@ -59,7 +59,8 @@ tar -zxvf <doenload_link_miniconda3_py37>
 >**Notes for myself**: check the video and correct this part.  
 
 ## Installing VSCode
-> <Image_VSCode_Download>
+> <Image_VSCode_Download>  
+
 VSCode is a freely available Integrated Developer Environment (IDE), 
 where you could code in a number of coding languages. It also doubles 
 up as a text-editor.  
@@ -73,7 +74,8 @@ to WSL on Window 10. So, we can use VSCode in each of the follwoing cases:
 1. Coding on Windows 10 (PC).
 1. Coding on Mac OSX. 
 1. Coding on WSL with VSCode installed on Windows 10 (PC). 
-1. Coding on Remote Server with Linux and accessing it from VSCode installed on PC or Mac.
+1. Coding on Remote Server with Linux and accessing it from VSCode installed on PC or Mac. 
+
 >**Note**: For technical clarity note that at the time of writing this document I 
 used WSL 2.0  
 

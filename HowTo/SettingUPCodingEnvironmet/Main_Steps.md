@@ -13,9 +13,37 @@ For a unix/linux machine we will assume the following steps are
 applicable to both local and remote machines, unless specified 
 specifically.  
 
+> A few tips and commands for linux (ubuntu): [link-to-file](...)
+
 1. Update and upgrade linux (ubuntu).  
-1. Install `zsh`.  
+    ```bash
+    # Run these commands in a bash shell to 
+    # update and then upgrade linux.
+    apt-get update
+    apt-get upgrade
+    ```
+1. Install `zsh` and `git`.  
+    ```bash
+    # Run these commands in a bash shell
+    sudo apt-get install zsh
+    sudo apt-get install git
+    ```
 1. Download and Setup **oh-my-zsh**.  
+   Visit [oh-my-zsh git-repo](https://github.com/ohmyzsh/ohmyzsh) and 
+   download it directly into the linux home using `curl`, as shown in 
+   the documentation at the github-repository.  
+   ```bash
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   ```
+   This step clones the repo and replaces the existing `~/.zshrc` with 
+   a template from `oh-my-zsh`; it also makes a backup of the existing 
+   `~/.zshrc` file.  
+   + You could use `ls -la` command to enlist all the 
+   files, including `~/.bashrc` and `~/.zshrc` (_which are otherwise 
+   hidden files, and hence you would not see them with `ls` command_).  
+   + Use `nano ~/.bashrc` or `nano ~/.zshrc` to open/edit the files 
+   if need be.
+   
 1. Update `~/.bashrc` and `~/.zshrc` files.  
 1. Further Updates to `~/.bashrc` file:  
   5.1. Setup symbolic links (shortcuts) to frequently used filepaths.  

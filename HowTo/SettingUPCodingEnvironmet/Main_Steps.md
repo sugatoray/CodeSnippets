@@ -13,17 +13,16 @@ For a unix/linux machine we will assume the following steps are
 applicable to both local and remote machines, unless specified 
 specifically.  
 
-1. Update and upgrade linux (ubuntu).
-1. Install `zsh`.
-1. Download and Setup **oh-my-zsh**.
-1. Update `~/.bashrc` and `~/.zshrc` files.
-1. Further Updates to `~/.bashrc` file:
-  1. Setup symbolic links (shortcuts) to frequently used filepaths.
-  1. Setup aliases for frequently used and/or long commands.
-  1. Setup exports for environment variable names (if any).
+1. Update and upgrade linux (ubuntu).  
+1. Install `zsh`.  
+1. Download and Setup **oh-my-zsh**.  
+1. Update `~/.bashrc` and `~/.zshrc` files.  
+1. Further Updates to `~/.bashrc` file:  
+  5.1. Setup symbolic links (shortcuts) to frequently used filepaths.  
+  5.2. Setup aliases for frequently used and/or long commands.  
+  5.3. Setup exports for environment variable names (if any).  
   
-## Installing Necessary Fonts for Properly Viewing _oh-my-zsh_ 
-Styling of the Terminal
+## Installing Necessary Fonts for Properly Viewing _oh-my-zsh_ Styling of the Terminal
 
 1. If you are accessing WSL-Ubuntu or Remote-Ubuntu/Linux/Unix 
 from a Windows 10 PC, you may observe that the `zsh` fonts at 
@@ -33,16 +32,19 @@ have to _**install** the necessary fonts_ on your **Windows 10 PC**.
   > **`image-here`**
   1. Navigate to your desired directory where you would like to 
   download the fonts from GitHub. And issue the following lines 
-  of command in the powershell window.
-  _Suggestion: maintain a folder `"GitHub"` for all the github 
+  of command in the powershell window.  
+  <p style="font-size:6px">
+  _Suggestion_: maintain a folder `"GitHub"` for all the github 
   repositories that you would download or work on. Each such repo 
   will have its own folder under GitHub. This will make maintenance 
-  easire later on._    
-```bash
-git clone https://github.com/powerline/fonts.git
-cd fonts
-powershell -ExecutionPolicy Bypass -File .\install.ps1
-```
+  easire later on.
+  </p>  
+  
+  ```bash
+  git clone https://github.com/powerline/fonts.git
+  cd fonts
+  powershell -ExecutionPolicy Bypass -File .\install.ps1
+  ```
 
 ## Installing Miniconda to Manage Python Environments
 1. Go to this site and download the miniconda distribution for 

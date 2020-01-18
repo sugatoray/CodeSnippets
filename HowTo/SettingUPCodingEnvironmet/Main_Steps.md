@@ -70,10 +70,10 @@ tar -zxvf <doenload_link_miniconda3_py37>
 1. SSH Client Related:  
   4.1. [Installing a supported SSH Client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)  
   4.2. [Installing the Windows OpenSSH Client]()  
-  > To install **`OpenSSH`** on Windows 10:  
-      A. start `Settings` then go to `Apps` > `Apps and Features` > `Manage Optional Features`.  
-      B. Scan this list to see if OpenSSH client is already installed. If not, then  
-         + at the top of the page select **`Add a feature`**.  
-         + locate **OpenSSH Client**, then click **`Install`**.  
+     > To install **`OpenSSH`** on Windows 10: 
+     >1. start `Settings` then go to `Apps` > `Apps and Features` > `Manage Optional Features`.  
+     >1. Scan this list to see if OpenSSH client is already installed. If not, then  
+            + at the top of the page select **`Add a feature`**.  
+            + locate **OpenSSH Client**, then click **`Install`**.  
 
 

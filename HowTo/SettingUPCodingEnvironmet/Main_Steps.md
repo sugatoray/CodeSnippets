@@ -58,38 +58,38 @@ tar -zxvf <doenload_link_miniconda3_py37>
 ```
 >**Notes for myself**: check the video and correct this part.  
 
-## Installing VSCode
+## Installing VS Code
 > <Image_VSCode_Download>  
 
-VSCode is a freely available Integrated Developer Environment (IDE), 
+VS Code is a freely available Integrated Developer Environment (IDE), 
 where you could code in a number of coding languages. It also doubles 
 up as a text-editor.  
 The good thing is that it is available for Windows, Mac and Linux. 
 Once installed, you can add various plugins and transform your coding 
 environment into a more productive, effective and crisp developer 
 experience.  
-Additionally, now you can also use VSCode to connect to a remote server 
+Additionally, now you can also use VS Code to connect to a remote server 
 and directly code there. It also provides a seemless method to connect 
-to WSL on Window 10. So, we can use VSCode in each of the follwoing cases:  
+to WSL on Window 10. So, we can use VS Code in each of the follwoing cases:  
 1. Coding on Windows 10 (PC).
 1. Coding on Mac OSX. 
-1. Coding on WSL with VSCode installed on Windows 10 (PC). 
-1. Coding on Remote Server with Linux and accessing it from VSCode installed on PC or Mac. 
+1. Coding on WSL with VS Code installed on Windows 10 (PC). 
+1. Coding on Remote Server with Linux and accessing it from VS Code installed on PC or Mac. 
 
 >**Note**: For technical clarity note that at the time of writing this document I 
 used WSL 2.0  
 
 > <Image_VSCode_Window_Screenshot>
 
-### Download and Install VSCode
-Go to https://code.visualstudio.com/ and download it for your OS (Windows/Mac/Linux). And install it. 
+### Download and Install VS Code
+Go to https://code.visualstudio.com/ and download VS Code installer for your OS (Windows/Mac/Linux) and install it. 
 See [this video](#ref) for installation demo.  
 
-## Setting Up VSCode
-Refer to these articles and videos to setup VSCode as you like. You may choose to use the following set of plugins that I personally would recommend. There are many more available, and you could choose them as per your development-needs. 
+## Setting Up VS Code
+Refer to these articles and videos to setup VS Code as you like. You may choose to use the following set of plugins that I personally would recommend. There are many more available, and you could choose them as per your development-needs. 
 > <list of web-links | include Corey-Schafer video>
 
-### Recommended Plugins for Python Development in VSCode
+### Recommended Plugins for Python Development in VS Code
 1. [Python _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 1. [Anaconda Extension Pack _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack)
 1. [Remote - WSL _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
@@ -113,21 +113,21 @@ Refer to these articles and videos to setup VSCode as you like. You may choose t
 1. [Material Theme Kit _by_ Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Theme-MaterialKit)
 1. [GitHub Pull Requests _by_ GitHub _[Preview]_](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
-## Accessing WSL-Ubuntu or Remote Server (Linux) with VSCode
+## Accessing WSL-Ubuntu or Remote Server (Linux) with VS Code
 The setup procedure is quite simple and there is nice documentation available as well.  
-+ [How to use VSCode Plugin for accessing WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
-+ [How to use VSCode Plugin for accessing Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
++ [How to use VS Code Plugin for accessing WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
++ [How to use VS Code Plugin for accessing Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
 
 
 # References
 
 1. Abhishek Thakur's Video: Setting up Code-Server 
-(_VSCode-like-IDE_) [YouTube Video](https://youtu.be/ArygUBY0QXw)
+(_VS Code-like-IDE_) [YouTube Video](https://youtu.be/ArygUBY0QXw)
 1. Abhishek Thakur's Video: Setting up Environment
 (_python_, _zsh_ and _oh-my-zsh_) [YouTube Video](https://www.youtube.com/watch?v=N9lo_UxSkWA)
-1. Official VSCode Plugin for WSL and Remote Server - Guide:  
-   + [How to use VSCode Plugin for accessing WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
-   + [How to use VSCode Plugin for accessing Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
+1. Official VS Code Plugin for WSL and Remote Server - Guide:  
+   + [How to use VS Code Plugin for accessing WSL?](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
+   + [How to use VS Code Plugin for accessing Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
 1. SSH Client Related:  
   4.1. [Installing a supported SSH Client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)  
   4.2. [Installing the Windows OpenSSH Client]()  
@@ -136,5 +136,10 @@ The setup procedure is quite simple and there is nice documentation available as
      >1. Scan this list to see if OpenSSH client is already installed. If not, then  
             + at the top of the page select **`Add a feature`**.  
             + locate **OpenSSH Client**, then click **`Install`**.  
-
+1. [VS Code on remote server using https://coder.com/](https://forums.fast.ai/t/vs-code-on-remote-server-using-https-coder-com/44909)
+1. [Managing Conda Environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+1. [Setting up Windows Subsystem for Linux with zsh + oh-my-zsh + ConEmu](https://blog.joaograssi.com/windows-subsystem-for-linux-with-oh-my-zsh-conemu/)
+1. [PowerShell says “execution of scripts is disabled on this system.”](https://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system) `-->` `powershell -ExecutionPolicy Bypass -File script.ps1`.
+1. [How to Access Your Ubuntu Bash Files in Windows (and Your Windows System Drive in Bash)](https://www.howtogeek.com/261383/how-to-access-your-ubuntu-bash-files-in-windows-and-your-windows-system-drive-in-bash/)
+1. [How to Use Zsh (or Another Shell) in Windows 10](https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/) `-->` `wsl zsh` in `cmd`.
 

@@ -158,7 +158,7 @@ The setup procedure is quite simple and there is nice documentation available as
    + [How to use VS Code Plugin for accessing Remote Server](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh)
 1. SSH Client Related:  
   4.1. [Installing a supported SSH Client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client)  
-  4.2. [Installing the Windows OpenSSH Client]()  
+  4.2. [Installing the Windows 10 OpenSSH Client](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809)  
      > To install **`OpenSSH`** on Windows 10: 
      >1. start `Settings` then go to `Apps` > `Apps and Features` > `Manage Optional Features`.  
      >1. Scan this list to see if OpenSSH client is already installed. If not, then  
@@ -172,4 +172,10 @@ The setup procedure is quite simple and there is nice documentation available as
 1. [How to Use Zsh (or Another Shell) in Windows 10](https://www.howtogeek.com/258518/how-to-use-zsh-or-another-shell-in-windows-10/) `-->` `wsl zsh` in `cmd`.
 1. [oh-my-zsh: github-repo](https://github.com/ohmyzsh/ohmyzsh)
 1. [Miniconda Installer Download Page](https://docs.conda.io/en/latest/miniconda.html)
-1. [...](...)
+1. [VS Code SSH: Getting STarted](https://code.visualstudio.com/docs/remote/ssh#_getting-started)
+1. [WSL 2 with Visual Studio Code](https://code.visualstudio.com/blogs/2019/09/03/wsl2)
+1. [Windows as a Linux developer machine](https://code.visualstudio.com/docs/setup/linux#_windows-as-a-linux-developer-machine)
+1. [Visual Code Online](https://code.visualstudio.com/updates/v1_41#_visual-studio-online)
+1. [Remote Development](https://code.visualstudio.com/updates/v1_41#_remote-development)
+1. [Developing in WSL](https://code.visualstudio.com/docs/remote/wsl)
+1. [Remote Developing in WSL: Getting Started](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)

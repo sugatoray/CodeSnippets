@@ -37,7 +37,7 @@ single line.
     ```
 1. **Create an environment from an `environment.yml` file**.  
 The environment is created under a directory path given by `--prefix` flag as shown 
-below. Preferably creae the environment under a relative path for each project at: 
+below. Preferably create the environment under a relative path for each project at: 
 `"./.env"` where `"."` is the root directory of the project repo. 
 
     ```bash
@@ -90,3 +90,4 @@ as well. Additionally, these list of environments could be searched using
         # # 
         # env_prompt: '({default_env}) '
         ```
+    **Note**: The same has beed documented and answered in this [stackoverflow-question](https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570).

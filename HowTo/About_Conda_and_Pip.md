@@ -7,7 +7,10 @@
 1. [Conda and pip - managing environments - berkley](https://berkeley-stat159-f17.github.io/stat159-f17/lectures/06-conda-pip-environments..html)
 1. [Using Pip in a Conda Environment](https://www.anaconda.com/using-pip-in-a-conda-environment/)
 1. [The Definitive Guide to Conda Environments - towardsdatascience](https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533)
-1. [**Conda configuration management: updating `.condarc` file**](https://docs.conda.io/projects/conda/en/latest/configuration.html)
+1. [**Conda configuration management: updating `.condarc` file**][#conda-config-condarc]
+
+
+[#conda-config-condarc]: https://docs.conda.io/projects/conda/en/latest/configuration.html
 
 
 # Updating Conda Environments
@@ -68,19 +71,22 @@ as well. Additionally, these list of environments could be searched using
     conda deactivate
     conda activate base
     ```
-    + Description of the `env_prompt` variable
-    ```bash
-    ### .condarc file (env_prompt section)
+    + **Description of the `env_prompt` variable**  
     
-    # # env_prompt (str)
-    # #   Template for prompt modification based on the active environment.
-    # #   Currently supported template variables are '{prefix}', '{name}', and
-    # #   '{default_env}'. '{prefix}' is the absolute path to the active
-    # #   environment. '{name}' is the basename of the active environment
-    # #   prefix. '{default_env}' holds the value of '{name}' if the active
-    # #   environment is a conda named environment ('-n' flag), or otherwise
-    # #   holds the value of '{prefix}'. Templating uses python's str.format()
-    # #   method.
-    # # 
-    # env_prompt: '({default_env}) '
-    ```
+    Source: [conda-config: `.condarc` file][#conda-config-condarc]
+    
+        ```bash
+        ### .condarc file (env_prompt section)
+
+        # # env_prompt (str)
+        # #   Template for prompt modification based on the active environment.
+        # #   Currently supported template variables are '{prefix}', '{name}', and
+        # #   '{default_env}'. '{prefix}' is the absolute path to the active
+        # #   environment. '{name}' is the basename of the active environment
+        # #   prefix. '{default_env}' holds the value of '{name}' if the active
+        # #   environment is a conda named environment ('-n' flag), or otherwise
+        # #   holds the value of '{prefix}'. Templating uses python's str.format()
+        # #   method.
+        # # 
+        # env_prompt: '({default_env}) '
+        ```

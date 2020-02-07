@@ -73,7 +73,7 @@ as well. Additionally, these list of environments could be searched using
     ```
     + **Description of the `env_prompt` variable**  
     
-    Source: [conda-config: `.condarc` file][#conda-config-condarc]
+        Source: [conda-config: `.condarc` file][#conda-config-condarc]
     
         ```bash
         ### .condarc file (env_prompt section)

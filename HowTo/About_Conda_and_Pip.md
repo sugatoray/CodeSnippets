@@ -47,9 +47,9 @@ below. Preferably create the environment under a relative path for each project 
 When activating an environment which is located at a non-default location, post 
 activation conda **_shows an entire path_** instead of just `(base)` or `(env_name)`. 
 Only environments created with a `-n` or `--name` flag show the `(env_name)` in 
-front of the path as the currently active conda environment. And it is convenient 
-as well. Additionally, these list of environments could be searched using 
-`conda env list` command.  
+front of the path as the currently active conda environment -- this is convenient. 
+Additionally, the list of environments thus created with `-n` flag could be searched 
+using `conda env list` command.  
 
     So, there is a [quick fix](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#specifying-a-location-for-an-environment) to this. 
     You need to update the `.condarc` file using 

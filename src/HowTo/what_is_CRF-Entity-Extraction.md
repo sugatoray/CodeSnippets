@@ -10,7 +10,6 @@ The goal of this document is to
 + The quest to look-up for CRF started from [<kbd>rasa-nlu-entity-extraction</kbd>][#rasa-nlu-entity-extraction]. 
 + There are a few [videos-links](#videos) provided as well.
 
-https://github.com/sugatoray/CodeSnippets/new/master/src/HowTo#videos
 
 ---
 ## CRF Explanation:

@@ -50,8 +50,10 @@ and [image segmentation](https://en.wikipedia.org/wiki/Image_segmentation "Imag
 
 ### Videos
 
-1. [RASA - Masterclass | 14+ Videos](https://www.youtube.com/playlist?list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc)
+1. [RASA - Masterclass | <kbd>14+ Videos</kbd>](https://www.youtube.com/playlist?list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc)
    >Rasa Masterclass: Developing Contextual AI assistants with Rasa tools
+   
+1. [RASA - Dialect Quiz Bot - Live Coding _by_ Rachel Tatman | <kbd>14 Videos</kbd> ](https://www.youtube.com/playlist?list=PL75e0qA87dlFvomavOFBIX6S9IvtGAXjM)
    
 1. [Coursera - CRF | <kbd>Length: 24:23</kbd> ](https://www.coursera.org/lecture/language-processing/memms-crfs-and-other-sequential-models-for-named-entity-recognition-Ctjm2)
 

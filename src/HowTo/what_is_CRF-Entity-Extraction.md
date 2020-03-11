@@ -45,11 +45,16 @@ and [image segmentation](https://en.wikipedia.org/wiki/Image_segmentation "Imag
 1. [Wikipedia - Conditional Random Field (CRF)][#crf-wikipedia]
 1. [nlp-guide-conditional-random-fields-text-classification][#crf-analyticsvidhya]
 1. [sklearn_crfsuite: docs][#sklearn-crfsuite-docs]
-1. [CRFsuite - _by_ CRFsuite is an implementation of Conditional Random Fields (CRFs)][#crfsuite]
+1. [CRFsuite - _by_ Naoaki Okazaki][#crfsuite]  
+   CRFsuite is an implementation of Conditional Random Fields (CRFs).
 
 ### Videos
 
+1. [RASA - Masterclass | 14+ Videos](https://www.youtube.com/playlist?list=PL75e0qA87dlHQny7z43NduZHPo6qd-cRc)
+   >Rasa Masterclass: Developing Contextual AI assistants with Rasa tools
+   
 1. [Coursera - CRF | <kbd>Length: 24:23</kbd> ](https://www.coursera.org/lecture/language-processing/memms-crfs-and-other-sequential-models-for-named-entity-recognition-Ctjm2)
+
 1. [Stanford University - CRF | <kbd>Length: 11:54</kbd> ](https://www.youtube.com/watch?v=rc3YDj5GiVM)
 
 ### Google Search

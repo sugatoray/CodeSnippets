@@ -5,8 +5,10 @@ The goal of this document is to
 1. Gather relevant sources.
 1. Glean and explain _What CRF Entity Extraction is_.
 
-The quest to look-up for CRF started from [<kbd>rasa-nlu-entity-extraction</kbd>][#rasa-nlu-entity-extraction]. 
-There are a few [videos-links][#videos] provided as well.
+**Note**
+
++ The quest to look-up for CRF started from [<kbd>rasa-nlu-entity-extraction</kbd>][#rasa-nlu-entity-extraction]. 
++ There are a few [videos-links](#videos) provided as well.
 
 https://github.com/sugatoray/CodeSnippets/new/master/src/HowTo#videos
 

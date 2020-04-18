@@ -33,7 +33,7 @@ conda update -n base -c defaults conda
 We also specify the python version and install some libraries using conda in a 
 single line.  
     ```bash
-    conda env create -n env_name python=3.7 numpy scipy matplotlib pandas
+    conda create -n env_name python=3.7 numpy scipy matplotlib pandas
     ```
 1. **Create an environment from an `environment.yml` file**.  
 The environment is created under a directory path given by `--prefix` flag as shown 

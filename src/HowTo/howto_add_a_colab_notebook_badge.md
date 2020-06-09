@@ -27,9 +27,11 @@ Then, replace `https://github.com` by `https://colab.research.google.com/github`
 ## Example: _with `html`_
 
 The rule to creating the link to colab-notebook is the same as before. The html code that produces the following badge (same as before) is in the following code-block. 
+
 <a href="https://colab.research.google.com/github/sugatoray/stackoverflow/blob/master/src/answers/Q_62273183/Q_62273183.ipynb" target="_parent">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+
 
 ```html
 <a href="https://colab.research.google.com/github/sugatoray/stackoverflow/blob/master/src/answers/Q_62273183/Q_62273183.ipynb" target="_parent">

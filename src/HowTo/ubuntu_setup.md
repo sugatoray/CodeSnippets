@@ -25,7 +25,7 @@ sugatoray@UbuntuX:~$ xrandr --output DP-1 --brightness 0.5
 sugatoray@UbuntuX:~$ xrandr --output HDMI-2 --brightness 0.5
 ```
 
-## Note
+### Note
 
 The `~/.config/monitors.xml` files stores display properties. I have made a backup copy of the 3-monitors-setup in `~/.config/monitors.xml.bkp`.
 
@@ -34,6 +34,18 @@ The `~/.config/monitors.xml` files stores display properties. I have made a back
 
 [#monitor-brightness-management]: https://askubuntu.com/questions/894465/changing-the-screen-brightness-of-the-external-screen#
 
+
+## Installation in Ubuntu
+
+1. [stackoverflow.com - *How to install a deb file, by dpkg -i or by apt?*][#stackoverflow] :star::star::star:
+1. [itsfoss.com - *3 Ways to Install Deb Files on Ubuntu [& How to Remove Them Later]*][#install-deb-files-ubuntu]
+
+```bash
+sudo apt install path/to/file.deb
+```
+
+[#stackoverflow]: https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt
+[#install-deb-files-ubuntu]: https://itsfoss.com/install-deb-files-ubuntu/
 
 ## References:
 

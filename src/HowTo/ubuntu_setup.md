@@ -25,6 +25,11 @@ sugatoray@UbuntuX:~$ xrandr --output DP-1 --brightness 0.5
 sugatoray@UbuntuX:~$ xrandr --output HDMI-2 --brightness 0.5
 ```
 
+## Note
+
+The `~/.config/monitors.xml` files stores display properties. I have made a backup copy of the 3-monitors-setup in `~/.config/monitors.xml.bkp`.
+
+
 <!--- Ref --->
 
 [#monitor-brightness-management]: https://askubuntu.com/questions/894465/changing-the-screen-brightness-of-the-external-screen#

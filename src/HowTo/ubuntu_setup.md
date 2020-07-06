@@ -47,6 +47,12 @@ sudo apt install path/to/file.deb
 [#stackoverflow]: https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt
 [#install-deb-files-ubuntu]: https://itsfoss.com/install-deb-files-ubuntu/
 
+
+## Setting up *SSH* in Ubuntu
+
+1. https://vitux.com/how-to-start-stop-or-restart-services-in-ubuntu/
+1. [SSH/Open SSH Configuration](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring#:~:text=Introduction,-Once%20you%20have&text=you%20will%20need%20to%20configure,file%20for%20the%20OpenSSH%20client.)
+1. http://manpages.ubuntu.com/manpages/bionic/man5/ssh_config.5.html
 ## References:
 
 1. [Changing the screen brightness of the external screen

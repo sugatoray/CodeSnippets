@@ -26,11 +26,22 @@ width https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md
 
 | Type | Description | Code |
 |:---:|:---:|:---:|
-| ... | Stackoverflow Reputation | [![Stackoverflow reputation](https://img.shields.io/stackexchange/stackoverflow/r/8474894.svg?style=flat&logo=stackoverflow)](https://stackoverflow.com/users/8474894) |
-| ... | GitHub License | [![GitHub](https://img.shields.io/github/license/sugatoray/stackoverflow.svg?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow/blob/master/LICENSE) |
-| ... | ... | [![GitHub last commit](https://img.shields.io/github/last-commit/sugatoray/stackoverflow?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow) |
+| Info/Update | Stackoverflow Reputation | [![Stackoverflow reputation](https://img.shields.io/stackexchange/stackoverflow/r/8474894.svg?style=flat&logo=stackoverflow)](https://stackoverflow.com/users/8474894) |
+| Info/Update | GitHub License | [![GitHub](https://img.shields.io/github/license/sugatoray/stackoverflow.svg?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow/blob/master/LICENSE) |
+| Info/Update | GitHub Last Commit | [![GitHub last commit](https://img.shields.io/github/last-commit/sugatoray/stackoverflow?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow) |
 
 | Payment | LinkedIn | [![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg??style=flat&logo=paypal)](https://www.paypal.me/sugatoray) |
+| Payment | BuyMeACoffee | [![BuyMeACoffe](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sugatoray) |
+| Info/Update | Stackoverflow Info Card | ... |
+
+---
+
+Something
+
+[![alt text][#inner]][#outer]
+
+[#inner]: "https://stackoverflow.com/users/flair/8474894.png"
+[#outer]: "https://stackoverflow.com/users/flair/8474894.png"
 
 ---
 

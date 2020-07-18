@@ -1,5 +1,5 @@
 # exclude vscode config files
-.vscode
+#.vscode
 
 # exclude .ipynb_checkpoints
 .ipynb_checkpoints

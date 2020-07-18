@@ -1,0 +1,38 @@
+{
+    "python.pythonPath": "C:\\Users\\raysu\\miniconda3\\envs\\fav_env\\python.exe",
+    // Editor and Window Settings
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
+    // Markdown Lint Settings
+    "markdownlint.config": {
+        "default": true,
+        "MD033": false, //no-inline-html
+        "MD036": false, //no-emphasis-as-heading
+        "MD026": false, //no-trailing-punctuation
+        "MD034": false, //no-bare-urls
+        "MD025": false, //single-title/single-h1
+        "MD009": false, //no-trailing-spaces
+        "MD040": false, //fenced-code-language
+    },
+    "markdownlint.ignore": [
+        // "path/to/some/file.md"
+    ],
+    // Markdown PDF Settings
+    "markdown-pdf.outputDirectoryRelativePathFile": true,
+    "markdown-pdf.outputDirectory": "exports",
+    // Instant Markdown Settings
+    "instantmarkdown.autoOpenBrowser": false,
+    // Markdown Extended Settings
+    "markdown.styles": [
+        //"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    ],
+    // Live Share Settings
+    "liveshare.account": "ray.sugato@gmail.com",
+    "liveshare.accountProvider": "github",
+    // OpenJDK Path for "Language Support for Java(TM) by Red Hat" -- redhat.java
+    "java.home": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.6.10-hotspot"
+}

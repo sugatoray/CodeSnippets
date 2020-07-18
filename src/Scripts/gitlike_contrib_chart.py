@@ -101,7 +101,7 @@ def gitlike_contribution_chart(df: pd.DataFrame,
     sns.heatmap(df, **heatmapdict, cmap = cmap, ax = ax)
     # Set x and y-ticklabels
     if yticklabels is not None:
-        ax.set_yticklabels(days)
+        ax.set_yticklabels(yticklabels)
     ax.set_xticklabels(xticklabels)
     ax.xaxis.set_tick_params(
         labelrotation = xticklabel_rotation, # 0
@@ -124,3 +124,28 @@ def gitlike_contribution_chart(df: pd.DataFrame,
     if show_figure: plt.show()
 
     return (fig, ax)
+
+
+if __name__ == '__main__':
+
+    # import numpy as np
+    # import pandas as pd
+
+    contributions = np.random.randint(
+        low=0, high=30, size=12*7*5).reshape(7, -1)
+
+    MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    xticklabels = MONTHS.copy()
+    yticklabels = DAYS.copy
+    df = pd.DataFrame(contributions, index = DAYS)
+    # Shortest
+    # fig, ax = gitlike_contribution_chart(df, show_figure=True)
+    # Option-2
+    fig, ax = gitlike_contribution_chart(df, show_figure = True,
+                                         xticklabels = MONTHS,
+                                         yticklabels = DAYS,
+                                         cmap = "Greens"
+                                         )
+

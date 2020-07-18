@@ -1,0 +1,74 @@
+# Instruction:
+## For an environment installed locally
+# cd ./.env
+# mkdir venv && cd venv
+# conda env create --prefix . -f ../environment.yml
+## For Updating local environment
+# conda env update --prefix . -f ../environment.yml  --prune
+#
+## For an environment installed globally
+## with a name: fav_env
+# conda env create -f environment.yml
+## For an environment installed globally: base, py37, py38
+# conda update conda -n base/py37/py38
+# conda create -n py37 python=3.7
+# conda create -n py37 python=3.8
+## In each of the envs: base, py37, py38
+# conda install jupyter jupyterlab numpy scipy pandas matplotlib scikit-learn scikit-image tqdm plotly imageio requests pylint autopep8 tabulate opencv pylint
+
+name: fav_env # favorite env
+channels:
+  - conda-forge
+  - anaconda
+  - default
+dependencies:
+  - python=3.7
+  - numpy # -c conda-forge, anaconda
+  - pandas # -c conda-forge, anaconda
+  - scipy # -c conda-forge, anaconda
+  - matplotlib # -c conda-forge, anaconda
+  - ipympl # -c conda-forge
+  - plotly # -c conda-forge
+  - seaborn # -c conda-forge
+  #- bokeh # -c conda-forge, anaconda
+  - jupyter # -c anaconda, conda-forge
+  - jupyterlab # -c anaconda, conda-forge
+  - jupyter_dashboards # -c conda-forge  (see: https://medium.com/plotly/introducing-jupyterdash-811f1f57c02e)
+  - tqdm # -c conda-forge, anaconda
+  - flask # -c conda-forge, anaconda
+  - flask-wtf # -c conda-forge, anaconda
+  - werkzeug==0.16.1 # -c conda-forge, anaconda  # necessary for avoiding code-breaking (since Feb-07, 2020). https://github.com/pallets/flask/issues/3481#issuecomment-583293364
+  - requests # -c conda-forge, anaconda
+  - codecov # -c conda-forge, anaconda
+  - pip
+  - sphinx # -c conda-forge
+  - sphinx_rtd_theme # -c anaconda
+  - pandoc # -c conda-forge
+  - tensorflow>=2.2.0 # -c anaconda
+  #- pytorch # -c pytorch
+  #- torchvision # -c pytorch
+  #- cudatoolkit=10.2 # -c pytorch
+  - scikit-learn # -c conda-forge, anaconda
+  - scikit-image # -c conda-forge, anaconda
+  - opencv # - conda-forge, anaconda
+  - imageio # -c anaconda, conda-forge
+  #- albumentations # -c conda-forge
+  #- imaug # -c conda-forge
+  - pylint # -c conda-forge, anaconda
+  - autopep8 # -c conda-forge, anaconda
+  - beautifulsoup4 # -c conda-forge
+  - selenium # -c conda-forge (needed for browser automation)
+  - geckodriver # -c conda-forge (needed with selenium)
+  - python-chromedriver-binary # -c conda-forge (needed with selenium)
+  - kaggle # -c conda-forge
+  #- pytest # -c conda-forge, anaconda
+  - pymongo # -c anaconda  ## python driver for MongoDB
+  - dnspython # -c conda-forge, anaconda  # necessary for pymongo
+  - tabulate # -c conda-forge, anaconda  # necessary for df.to_markdown() in pandas
+  - pip:
+    - Flask-Testing
+    - hypothesis
+    #- sphinx_rtd_theme
+    #- jupyter-dash
+    #- torchsummary
+    - streamlit # https://docs.streamlit.io/en/stable/troubleshooting/clean-install.html

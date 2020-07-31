@@ -108,7 +108,9 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 
 1. Go to Google Scholar.
 2. Search for the research paper/book.
-3. Click on the quotation sign.
-   [![Cite from Google Scholar][#cite-google-scholar]][#cite-google-scholar]]
+3. Click on the quotation sign and select BibTeX.
+   [![BibTeX from Google Scholar][#front-page-google-scholar-bibtex]][#yt-google-scholar-bibtex]
 
-   [#cite-google-scholar]: /docs/resources/images/google_scholar_search_example.png 
+   [#yt-google-scholar-bibtex]: https://youtu.be/aB_W2RORVdw
+   [#front-page-google-scholar-bibtex]: resources/Google_Scholar_BibTeX_Demo_FrontPage.png
+   [#cite-google-scholar]: resources/google_scholar_search_example.png 

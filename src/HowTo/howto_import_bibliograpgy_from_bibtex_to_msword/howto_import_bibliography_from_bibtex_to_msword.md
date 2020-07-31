@@ -87,11 +87,11 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 1. Open MS Word and import the bibliographies from the XML file.
    - Open MS Word: either an *existing* document or a *new* document.
    - Click on **References** ribbon.
-   - Click on **Manage Sources** >> **Browse**.
+   - Click on <kbd>**Manage Sources**</kbd> >> <kbd>**Browse**</kbd>.
    - Select the downloaded XML file from your computer.
    - Select all the references on the left box: <kbd>SHIFT</kbd> + <kbd>⇓</kbd>
-   - Click on **Copy ->**, to copy these references to the box on the right side (Current List).
-   - Click on **Close**.
+   - Click on <kbd>**Copy ->**</kbd>, to copy these references to the box on the right side (Current List).
+   - Click on <kbd>**Close**</kbd>.
 
 1. Time to test if the porting worked or not. 
    - Click on **Bibliography**.

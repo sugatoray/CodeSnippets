@@ -1,5 +1,9 @@
 # How To Import Bibliography From A BibTeX File To MS Word Document
 
+[![landing-image][#image-bibtex-xml-msword]][#image-bibtex-xml-msword]:
+
+[#image-bibtex-xml-msword]: resources/bibtex_to_xml_to_msword_front-page.png
+
 Managing bibliographies could become a headache if not dealt with strategically. Those of you who have used **`LaTeX`**, know that managing bibliography with `BibTeX` is one of the benefits of using LaTeX as opposed to using MS Word. However, there could be scenarios when you may want to work using MS Word, while still having the simplicity of managing the bibliography using BibTeX.
 
 Here, I present to you a **Ten Steps** receipe to do this. In fact logically speaking it is only three steps: 

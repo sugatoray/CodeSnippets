@@ -9,7 +9,7 @@ Managing bibliographies could become a headache if not dealt with strategically.
 Here, I present to you a **Ten Steps** receipe to do this. In fact logically speaking it is only three steps: 
 
 - Create bibliography as a BibTeX (`.bib`) file.
-- Upload the `.bib` file to Mendley and download the bibliography as an XML (`.xml`) file using the export functionality in Mendley.
+- Upload the `.bib` file to Mendeley and download the bibliography as an XML (`.xml`) file using the export functionality in Mendeley.
 - Import the `.xml` file with bibliography into MS Word using **Manage Sources** functionality for **References** and create **Bibliography**.
 
 A sample BibTeX file looks like this:
@@ -47,23 +47,23 @@ author = {Biewald, Lukas},
 1. Create a bibliography file with citations saved in BibTeX format. 
    Save it. Let us name the file `citations.bib`.
 
-## B. Upload bibliography to Mendley and export as XML for MS Word
+## B. Upload bibliography to Mendeley and export as XML for MS Word
 
-Upload the `.bib` file to Mendley and download the bibliography as an XML (`.xml`) file using the export functionality in Mendley.
+Upload the `.bib` file to Mendeley and download the bibliography as an XML (`.xml`) file using the export functionality in Mendeley.
 
-1. Log into your [Mendley Account][#mendley].
-   - Open a free Mendley account (if you don't have one already) at: https://www.mendeley.com/. 
-   - Mendley helps you manage your references online. 
+1. Log into your [Mendeley Account][#mendeley].
+   - Open a free Mendeley account (if you don't have one already) at: https://www.mendeley.com/. 
+   - Mendeley helps you manage your references online. 
    - You don't have to download any software for this process.
 
-   [#mendley]: https://www.mendeley.com/
+   [#mendeley]: https://www.mendeley.com/
 
-1. Create a Folder in Mendley. Let us call it **`Test Refs`**.
+1. Create a Folder in Mendeley. Let us call it **`Test Refs`**.
    - Click on <kbd>+ Add</kbd>.
    - Click on <kbd>New Folder</kbd>.
    - Name it `Test Refs`.
 
-1. Upload the bibliography file (`citations.bib`) to Mendley.
+1. Upload the bibliography file (`citations.bib`) to Mendeley.
    - Click on <kbd>+ Add</kbd>.
    - Click on <kbd>Import BibTeX (.bib)</kbd>.
    - Select the file, `citations.bib` from your computer.

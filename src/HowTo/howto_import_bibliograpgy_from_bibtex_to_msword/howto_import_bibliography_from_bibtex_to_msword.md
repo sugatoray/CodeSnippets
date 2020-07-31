@@ -1,6 +1,6 @@
 # How To Import Bibliography From A BibTeX File To MS Word Document
 
-[![landing-image][#image-bibtex-xml-msword]][#image-bibtex-xml-msword]:
+[![landing-image][#image-bibtex-xml-msword]][#image-bibtex-xml-msword]
 
 [#image-bibtex-xml-msword]: resources/bibtex_to_xml_to_msword_front-page.png
 

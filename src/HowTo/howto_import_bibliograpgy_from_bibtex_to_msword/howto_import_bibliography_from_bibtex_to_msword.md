@@ -132,4 +132,4 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 
 ---
 
-Copyright &copy; Sugato Ray | 2020.
+Copyright &copy; Sugato Ray | 2020

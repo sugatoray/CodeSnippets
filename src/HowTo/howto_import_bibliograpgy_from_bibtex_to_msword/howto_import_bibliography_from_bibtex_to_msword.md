@@ -114,3 +114,18 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
    [#yt-google-scholar-bibtex]: https://youtu.be/aB_W2RORVdw
    [#front-page-google-scholar-bibtex]: resources/Google_Scholar_BibTeX_Demo_FrontPage.png
    [#cite-google-scholar]: resources/google_scholar_search_example.png 
+
+---
+
+## Reeferences
+
+1. [Open, Edit, and Convert BIB and BIBTEX Files](https://www.lifewire.com/bibtex-file-2619874)
+2. [Bibutils - *bib2xml*](http://bibutils.refbase.org/#bib2xml)
+3. Google Scholar: https://scholar.google.com/
+4. Wikipedia - BibTeX: https://en.wikipedia.org/wiki/BibTeX
+5. BibTeX Editor (online): https://truben.no/latex/bibtex/
+Wikipedia BibTeX Generator: https://irl.github.io/bibwiki
+
+---
+
+Copyright &copy; Sugato Ray | 2020.

@@ -1,5 +1,9 @@
 # Adding Copyright Information as a Badge in Your Markdown Document
 
+[![Landing Image][#image-copyright-multibadge-demo]][#image-copyright-multibadge-demo]
+
+[#image-copyright-multibadge-demo]: resources/copyright_multibadge_demo.png
+
 A typical copyright statement, often located at the bottom of web-pages looks as follows:
 
 - Copyright &copy; Sugato Ray | 2020

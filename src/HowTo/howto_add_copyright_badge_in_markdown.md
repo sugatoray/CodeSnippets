@@ -86,11 +86,31 @@ Using: *RUNKIT-endpoint* in badgen.net
 
 [#copyright-badge-dynamic]: https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2018
 
+**`URL`**
+
+```bash
+## Note: A temporary HACK
+# the +++ sign separates the key-value pairs from the rest of the url
+# this is a temporary hack
+https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2018
+```
+
 Using: *HTTP-endpoint* in badgen.net
 
 [![copyright-logo][#copyright-badge-dynamic]][#copyright-badge-dynamic] 
 
 [#copyright-badge-dynamic]: https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
+
+**`URL`**
+
+```bash
+## Note: A temporary HACK
+# the +++ sign separates the key-value pairs from the rest of the url
+# this is a temporary hack
+https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
+```
+
+---
 
 ## References
 

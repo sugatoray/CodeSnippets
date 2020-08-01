@@ -10,7 +10,7 @@ A typical copyright statement, often located at the bottom of web-pages looks li
 - Copyright &copy; Sugato Ray | 2018-2020
 - Copyright &copy; Sugato Ray. All Rights Reserved. 2020-2021. 
 
-The problem is that you would manually have to update the latest date (the current year - `2020`, in this case). This brings the question then, *how to dynamically update the copyright year?*
+The problem is that you would manually have to update the latest date (the current year - `2020`, in this case). This brings the question, *how to dynamically update the copyright year?*
 
 In a regular HTML page you could paste in the following script and be done with it.
 

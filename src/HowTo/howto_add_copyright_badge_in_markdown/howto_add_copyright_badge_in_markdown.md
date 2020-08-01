@@ -4,7 +4,7 @@
 
 [#image-copyright-multibadge-demo]: resources/copyright_multibadge_demo.png
 
-A typical copyright statement, often located at the bottom of web-pages looks as follows:
+A typical copyright statement, often located at the bottom of web-pages looks like:
 
 - Copyright &copy; Sugato Ray | 2020
 - Copyright &copy; Sugato Ray | 2018-2020

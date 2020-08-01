@@ -66,7 +66,6 @@ The `Copyright Badge` project: https://runkit.com/sugatoray/copyright-badge
 
 - Main site: https://shields.io/
 
-
 ```bash
 # Using dash "-" separator
 https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
@@ -75,7 +74,7 @@ https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
 #    Dash(es)
 #    Underscore(s)
 #    Space(s)
-# Dashes --	→ - Dash
+# Dashes -- → - Dash
 # Underscores __ → _ Underscore
 # _ or Space  →  Space
 

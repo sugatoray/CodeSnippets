@@ -121,9 +121,9 @@ Here is an example using `name=sugatoray, start_year=2018, color=green`
 
 Using: *RUNKIT-endpoint* in badgen.net
 
-[![copyright-logo][#copyright-badge-dynamic]][#copyright-badge-dynamic] 
+[![copyright-logo][#copyright-badge-dynamic-runkit]][#copyright-badge-dynamic-runkit] 
 
-[#copyright-badge-dynamic]: https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2018
+[#copyright-badge-dynamic-runkit]: https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2018
 
 **`URL`**
 
@@ -136,9 +136,9 @@ https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=su
 
 Using: *HTTP-endpoint* in badgen.net
 
-[![copyright-logo][#copyright-badge-dynamic]][#copyright-badge-dynamic] 
+[![copyright-logo][#copyright-badge-dynamic-https]][#copyright-badge-dynamic-https] 
 
-[#copyright-badge-dynamic]: https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
+[#copyright-badge-dynamic-https]: https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
 
 **`URL`**
 

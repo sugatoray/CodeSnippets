@@ -150,4 +150,4 @@ Copyright &copy; Sugato Ray | 2020
 
 [![copyright-logo][#copyright-badge2]][#copyright-badge2]
 
-[#copyright-badge2]: https://badgen.net/https/date-badge-mrjlip20e4ba.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
+[#copyright-badge2]: https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018

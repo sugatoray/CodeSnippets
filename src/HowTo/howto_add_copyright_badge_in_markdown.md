@@ -62,6 +62,42 @@ The `Copyright Badge` project: https://runkit.com/sugatoray/copyright-badge
 
 [#copyright-badge-static-badgen-net]: https://badgen.net/badge/Copyright%20%C2%A9%20sugatoray/2018-2020/green
 
+## `Shields.io` Syntax Summary
+
+- Main site: https://shields.io/
+
+
+```bash
+# Using dash "-" separator
+https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
+
+## Conversion Logic for 
+#    Dash(es)
+#    Underscore(s)
+#    Space(s)
+# Dashes --	→ - Dash
+# Underscores __ → _ Underscore
+# _ or Space  →  Space
+
+# Using query string parameters
+https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
+```
+
+## `Badgen.net` Syntax Summary
+
+- Classic style: https://badgen.net/
+- Flat style: https://flat.badgen.net/
+
+```bash
+https://badgen.net/badge/:subject/:status/:color?icon=github
+                   ──┬──  ───┬───  ──┬───  ──┬── ────┬──────
+                     │       │       │       │       └─ Options (label, list, icon, color)
+                     │       │       │       │
+                     │      TEXT    TEXT    RGB / COLOR_NAME ( optional )
+                     │
+                  "badge" - default (static) badge generator
+```
+
 ## **Dynamic Badge**
 
 The problem with a static badge is that it does not update the current year of copyright. This is why I used a runkit.com notebook to create an ndpoint and provide necessary information (current year, etc.) as a `JSON` and feed that to badgen.net service. The following is an example of what parameters could be specified by the user to generate the JSON.

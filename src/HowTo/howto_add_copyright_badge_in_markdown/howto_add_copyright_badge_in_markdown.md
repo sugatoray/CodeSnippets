@@ -156,3 +156,9 @@ https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+
 Answer the following question on stackoverflow later:
 
 https://stackoverflow.com/questions/54563526/is-there-markdown-syntax-that-will-allow-my-copyright-date-to-automatically-upda
+
+---
+
+[![copyright-logo][#copyright-badge-dynamic]][#copyright-badge-dynamic] 
+
+[#copyright-badge-dynamic]: https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2020

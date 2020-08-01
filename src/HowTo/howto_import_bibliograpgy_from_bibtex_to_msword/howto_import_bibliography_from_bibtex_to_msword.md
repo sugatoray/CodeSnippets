@@ -133,3 +133,17 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 ---
 
 Copyright &copy; Sugato Ray | 2020
+
+<p style="text-align: left"> Copyright &copy; 2014-<script>document.write(new Date().getFullYear())</script> Sugato Ray. All Rights Reserved.</p>
+
+Static copy-right badge
+
+[![copyright-logo][#copyright-badge]][#copyright-badge]
+
+[#copyright-badge]: https://img.shields.io/badge/Copyright%20%C2%A9%20sugatoray-2020--2021-green?style=flat
+
+Dynamic copyright badge:
+
+[![copyright-logo][#copyright-badge2]][#copyright-badge2]
+
+[#copyright-badge2]: https://badgen.net/https/date-badge-mrjlip20e4ba.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018

@@ -18,7 +18,7 @@ See https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md a
 &nbsp; &nbsp;
 [![GitHub](https://img.shields.io/github/license/sugatoray/stackoverflow.svg?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow/blob/master/LICENSE)
 &nbsp; &nbsp;
-[![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg??style=flat&logo=paypal)](https://www.paypal.me/sugatoray)
+[![PayPal Donate](https://img.shields.io/badge/donate-PayPal-blue.svg??style=flat&logo=paypal)](https://www.paypal.me/sugatoray)
 &nbsp; &nbsp;
 [![GitHub last commit](https://img.shields.io/github/last-commit/sugatoray/stackoverflow?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow)
 &nbsp; &nbsp;
@@ -27,8 +27,9 @@ See https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md a
 | Type | Description | Code |
 |:---:|:---:|:---:|
 | Info/Update | Stackoverflow Reputation | [![Stackoverflow reputation][#badge-stackoverflow-reputation]][#user-stackoverflow] |
-| Info/Update | GitHub License | [![GitHub][#badge-github-repo-license]][#github-repo-license] |
-| Info/Update | GitHub Last Commit | [![GitHub][#badge-github-last-commit]][#github-repo] |
+| Info/Update | GitHub Repo License | [![GitHub Repo License][#badge-github-repo-license]][#github-repo-license] |
+| Info/Update | GitHub Repo Last-Commit | [![GitHub Repo Last-Commit][#badge-github-last-commit]][#github-repo] |
+| Info/Update | GitHub Repo Commit-Activity | [![GitHub Repo Commit-Activity][#badge-github-commit-activity]][#github-repo] |
 | Payment | LinkedIn | [![PayPal Donate][#badge-paypal-donate]][#user-paypal-donate] |
 | Payment | BuyMeACoffee | [![BuyMeACoffe][#badge-buymeacoffee]][#user-buymeacoffee] |
 | Info/Update | Stackoverflow Info Card | [![Stackoverflow Info Card][#user-stackoverflow-info-logo]][#user-stackoverflow] |
@@ -39,7 +40,8 @@ See https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md a
 [#badge-github-repo-license]: https://img.shields.io/github/license/sugatoray/stackoverflow.svg?style=flat&logo=github
 [#github-repo-license]: https://github.com/sugatoray/stackoverflow/blob/master/LICENSE
 [#badge-github-last-commit]: https://img.shields.io/github/last-commit/sugatoray/stackoverflow?style=flat&logo=github
-[#user-repo]: https://github.com/sugatoray/stackoverflow
+[#badge-github-commit-activity]: https://img.shields.io/github/commit-activity/m/sugatoray/stackoverflow?style=flat&logo=github
+[#github-repo]: https://github.com/sugatoray/stackoverflow
 [#badge-paypal-donate]: https://img.shields.io/badge/donate-PayPal-blue.svg??style=flat&logo=paypal
 [#user-paypal-donate]: (https://www.paypal.me/sugatoray
 [#badge-buymeacoffee]: https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png

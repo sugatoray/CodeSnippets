@@ -10,7 +10,7 @@
 
 ## Examples
 
-width https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md as the core implementation, and clainms on your wil
+See https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md as the core implementation that some of these badges were adapted from.
 
 [![BuyMeACoffe](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sugatoray)
 
@@ -26,12 +26,12 @@ width https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md
 
 | Type | Description | Code |
 |:---:|:---:|:---:|
-| Info/Update | Stackoverflow Reputation | [![Stackoverflow reputation](https://img.shields.io/stackexchange/stackoverflow/r/8474894.svg?style=flat&logo=stackoverflow)](https://stackoverflow.com/users/8474894) |
-| Info/Update | GitHub License | [![GitHub](https://img.shields.io/github/license/sugatoray/stackoverflow.svg?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow/blob/master/LICENSE) |
-| Info/Update | GitHub Last Commit | [![GitHub last commit](https://img.shields.io/github/last-commit/sugatoray/stackoverflow?style=flat&logo=github)](https://github.com/sugatoray/stackoverflow) |
-| Payment | LinkedIn | [![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg??style=flat&logo=paypal)](https://www.paypal.me/sugatoray) |
-| Payment | BuyMeACoffee | [![BuyMeACoffe](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sugatoray) |
-| Info/Update | Stackoverflow Info Card | [![Stackoverflow Info Card][#stackoverflow-info-card]][#stackoverflow-info-card] |
+| Info/Update | Stackoverflow Reputation | [![Stackoverflow reputation][#badge-stackoverflow-reputation]][#user-stackoverflow] |
+| Info/Update | GitHub License | [![GitHub][#badge-github-repo-license]][#github-repo-license] |
+| Info/Update | GitHub Last Commit | [![GitHub][#badge-github-last-commit]][#github-repo] |
+| Payment | LinkedIn | [![PayPal Donate][#badge-paypal-donate]][#user-paypal-donate] |
+| Payment | BuyMeACoffee | [![BuyMeACoffe][#badge-buymeacoffee]][#user-buymeacoffee] |
+| Info/Update | Stackoverflow Info Card | ... |
 
 [#badge-stackoverflow-reputation]: https://img.shields.io/stackexchange/stackoverflow/r/8474894.svg?style=flat&logo=stackoverflow
 [#user-stackoverflow]: https://stackoverflow.com/users/8474894
@@ -46,13 +46,21 @@ width https://raw.githubusercontent.com/eyllanesc/stackoverflow/master/README.md
 
 ---
 
-Something
+## Stackoverflow Information Card
 
-[![Stackoverflow Info Card][#stackoverflow-info-card]][#stackoverflow-info-card]
+The Stackoverflow Information Card does not work (yet) with markdown syntax
 
-[#stackoverflow-info-card]: "https://stackoverflow.com/users/flair/8474894.png"
+```markdown
+[![Stackoverflow Info Card][#stackoverflow-info-card]][#user-stackoverflow]
 
----
+[#stackoverflow-info-logo]: "https://stackoverflow.com/users/flair/8474894.png"
+```
+
+[![Stackoverflow Info Card][#stackoverflow-info-card]][#user-stackoverflow]
+
+[#stackoverflow-info-logo]: "https://stackoverflow.com/users/flair/8474894.png"
+
+The `stackoverflow-info-card` using `html` tags.
 
 <a href="https://stackoverflow.com/users/8474894/cypherx"><img src="https://stackoverflow.com/users/flair/8474894.png" width="208" height="58" alt="Profile for sugatoray at Stack Overflow, as CypherX." title="Profile for CypherX at Stack Overflow - Physicist (MS, PhD) | Programmer | MBA | Data Science | Machine Learning"></a>
 

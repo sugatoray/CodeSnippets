@@ -12,6 +12,8 @@
 
 ## How to clear Clipboard history?
 
+- <kbd>Win</kbd> + <kbd>V</kbd> `>>` Click on **`...`** of any item >> Select **Clear all** 
+
 URL: https://www.tenforums.com/tutorials/109854-clear-clipboard-data-windows-10-a.html
 - **Option 1**: To Clear All Clipboard History Data Including Pinned Items from Settings
 - **Option 2**: To Clear All Clipboard History Data Excluding Pinned Items from Settings

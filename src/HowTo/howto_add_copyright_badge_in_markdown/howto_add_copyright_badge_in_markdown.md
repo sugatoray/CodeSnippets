@@ -103,7 +103,7 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ## **Dynamic Badge**
 
-The problem with a static badge is that it does not update the current year of copyright. This is why I used a runkit.com notebook to create an ndpoint and provide necessary information (current year, etc.) as a `JSON` and feed that to badgen.net service. The following is an example of what parameters could be specified by the user to generate the JSON.
+The problem with a static badge is that it does not update the current year of copyright. This is why I used a runkit.com notebook to create an endpoint and provide necessary information (current year, etc.) as a `JSON` and feed that to badgen.net service. The following is an example of what parameters could be specified by the user to generate the JSON.
 
 ```python
 dict(

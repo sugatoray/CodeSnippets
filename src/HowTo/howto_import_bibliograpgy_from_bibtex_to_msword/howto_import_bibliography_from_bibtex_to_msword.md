@@ -121,7 +121,7 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 
 ---
 
-## Reeferences
+## References
 
 1. [Open, Edit, and Convert BIB and BIBTEX Files](https://www.lifewire.com/bibtex-file-2619874)
 2. [Bibutils - *bib2xml*](http://bibutils.refbase.org/#bib2xml)

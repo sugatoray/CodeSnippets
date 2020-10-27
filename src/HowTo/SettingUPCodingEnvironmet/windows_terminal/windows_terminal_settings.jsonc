@@ -20,7 +20,7 @@
     // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
 
-    // theme
+    // Theme
     "theme": "dark",
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
@@ -32,13 +32,18 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
+            // Prefereed fontFaces are:
+            //   - "Cascadia Mono PL"
+            //   - "DejaVu Sans Mono for Powerline"
+            //   - "Cascadia Mono"
             "showTerminalTitleInTitlebar": false,
             "showTabsInTitlebar": true,  //
             "snapToGridOnResize": true,  // window resize behavior
             "copyFormatting": true,  // controls the color and font formatting of the selected text
             "padding": "5, 5, 5, 5",
             "fontSize": 16,
-            "fontFace": "Cascadia Mono"
+            "fontFace": "Cascadia Mono" // "Cascadia Mono PL", "DejaVu Sans Mono for Powerline", "Cascadia Mono",
+            // "background": "#272822" // This will set a dark background
         },
         "list":
         [
@@ -50,12 +55,13 @@
                 "tabColor": "#17B2FF",
                 "commandline": "powershell.exe",
                 "hidden": false,
-                "fontFace": "Cascadia Code PL", // "DejaVu Sans Mono for Powerline", // "Cascadia Mono"
+                "fontFace": "Cascadia Code PL",
                 "fontSize": 12,
                 "colorScheme": "Frost",
                 "useAcrylic": true,
                 "acrylicOpacity": 0.8
             },
+
             {
                 // Make changes here to the cmd.exe profile.
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -78,7 +84,7 @@
                 "tabTitle": "Ubuntu",
                 "tabColor": "#DC143C",
                 "source": "Windows.Terminal.Wsl",
-                "fontFace": "Cascadia Code PL", // "DejaVu Sans Mono for Powerline", // "Cascadia Mono",
+                "fontFace": "Cascadia Code PL",
                 "fontSize": 12,
                 "colorScheme": "One Half Dark",
                 //"background": "#272822",
@@ -90,12 +96,11 @@
                 // shell: zsh
                 "guid": "{23294f23-2510-422a-ac6e-6fcfa3b61e13}",
                 "hidden": false,
-                "name": "Ubuntu-Zsh",
-                "tabTitle": "Ubuntu-zsh",
+                "name": "Ubuntu Zsh",
+                "tabTitle": "Ubuntu-Zsh",
                 "tabColor": "#32CD32",
-                //"source": "Windows.Terminal.Wsl",
                 "commandline": "wsl zsh",
-                "fontFace": "Cascadia Code PL", // "DejaVu Sans Mono for Powerline", // "Cascadia Mono",
+                "fontFace": "Cascadia Code PL",
                 "fontSize": 12,
                 "colorScheme": "Dracula",
                 //"background": "#272822",
@@ -107,12 +112,11 @@
                 // shell: bash
                 "guid": "{5d8ce81d-d9f4-4739-9a71-b8706f605588}",
                 "hidden": false,
-                "name": "Ubuntu-Bash",
-                "tabTitle": "Ubuntu-bash",
+                "name": "Ubuntu Bash",
+                "tabTitle": "Ubuntu-Bash",
                 "tabColor": "#DDDD00",
-                //"source": "Windows.Terminal.Wsl",
-                "commandline": "wsl bash",
-                "fontFace": "Cascadia Code PL", // "DejaVu Sans Mono for Powerline", // "Cascadia Mono",
+                "commandline": "wsl.exe bash",
+                "fontFace": "Cascadia Code PL",
                 "fontSize": 12,
                 "colorScheme": "Raspberry",
                 //"background": "#272822",
@@ -123,7 +127,7 @@
             {
                 "guid": "{247078a4-4dbe-40a9-a3d4-7d61295634ff}",
                 "name": "Git Bash",
-                "tabTitle": "Git Bash",
+                "tabTitle": "GitBash",
                 "commandline": "C:/Program Files/Git/bin/bash.exe",
                 "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
                 "startingDirectory": "%USERPROFILE%",

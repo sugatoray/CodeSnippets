@@ -90,7 +90,7 @@
                 "source": "Windows.Terminal.Wsl",
                 "fontFace": "Cascadia Code PL",
                 "fontSize": 12,
-                "colorScheme": "Solarized Dark", // "One Half Dark",
+                "colorScheme": "One Half Dark", // "Solarized Dark",
                 //"background": "#272822",
                 "useAcrylic": true,
                 "acrylicOpacity": 0.8

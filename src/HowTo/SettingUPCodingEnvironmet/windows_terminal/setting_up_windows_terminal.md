@@ -10,9 +10,18 @@ See this document for more details: https://docs.microsoft.com/en-us/windows/ter
 ```bash
 wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; split-pane -H wsl.exe bash
 ```
-[![demo split panes][#wt-demo-split-panes]][#wt-demo-split-panes]
+<details>
+  <summary>Click to expand and see the figure</summary>
+  <img src="./resources/windows_terminal_multipane.png"/>
 
+</details>
+
+<!---
+[![demo split panes][#wt-demo-split-panes]][#wt-demo-split-panes]
+--->
 [#wt-demo-split-panes]: ./resources/windows_terminal_multipane.png
+
+
 
 ## GUID
 
@@ -82,6 +91,27 @@ wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; spli
 See the video from here: [_Tutorial: Set up Powerline in Windows Terminal_][#ps-powerline-fonts-setup]
 
 [#ps-powerline-fonts-setup]: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+
+1. Download the `.zip` file of the latest release of Cascadia Code from its GitHub repo: https://github.com/microsoft/cascadia-code/releases
+
+At the time of writing this document, the latest release file was: `CascadiaCode-2009.22.zip` [[Link to the zip file][#zip-file]]
+
+[#zip-file]: https://github.com/microsoft/cascadia-code/releases/download/v2009.22/CascadiaCode-2009.22.zip
+
+1. The files that you need to install are:
+
+```bash
+# See inside the ttf directory
+# You only need the true-type-fonts (.ttf) 
+# that **end with** PL (for PowerLine abbreviation).
+
+CascadiaCodePL.ttf
+CascadiaMonoPL.ttf
+```
+
+1. Open `C:\Windows\Fonts` and drag and drop the relevant files (_that we selected in the last step_). This will start installing these files. Once installation finishes, move to the next section. 
+
+> It is a very good idea to watch the video in [this tutorial][#ps-powerline-fonts-setup] alongside.
 
 ### Setup Windows PowerShell Profile
 
@@ -154,6 +184,8 @@ PS C:\Users\raysu>
 
 1. [Tutorial: Set up Powerline in Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup) :star: :star: :star:
 
+1. [How to make a pretty prompt in Windows Terminal with `Powerline`, `Nerd Fonts`, `Cascadia Code`, `WSL`, and `oh-my-posh` _by_ Scott Hanselman](https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh)
+
 1. [Powerline in PowerShell theme for Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/powerline-in-powershell)
 
 1. [Color schemes in Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes)
@@ -175,3 +207,5 @@ PS C:\Users\raysu>
 1. [Beautify your Windows Terminal](https://dev.to/anupa/beautify-your-windows-terminal-1la8)
 
 1. [3 Ways to Customize Your Windows Terminal](https://blogs.windows.com/windowsdeveloper/2020/06/30/3-ways-to-customize-your-windows-terminal/)
+
+1. [How to change the color scheme in the new Windows Terminal](https://aavtech.site/2020/03/how-to-change-the-color-scheme-in-the-new-windows-terminal/) :star:

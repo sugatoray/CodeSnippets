@@ -1,15 +1,27 @@
-# How to add emogies using Python
+# How to add emoji using Python
 
-Use library: **emogi** :star: :star: :star: 
+Use library: **emoji** :star: :star: :star: 
 
 Github repo: https://github.com/carpedm20/emoji
+
+## Trivia
+
+- The word `emoji` is used both as a _singular_ and _plural_ noun. However, _emojis_ is also plural of `emoji`. [Source][#emoji-dictionary]
+  
+  [#emoji-dictionary]: https://www.merriam-webster.com/dictionary/emoji#:~:text=noun,plural%20emoji%20or%20emojis
+  
+- Know what an emoji stands for: 
+📙 [Emojipedia][#emojipedia] — 😃 Home of Emoji Meanings 💁👌🎍😍
+
+  [#emojipedia]: https://emojipedia.org/
+
 
 ## Installation
 
 Via pip.
 
 ```bash
-pip install emogi --upgrade
+pip install emoji --upgrade
 ```
 
 ## Example

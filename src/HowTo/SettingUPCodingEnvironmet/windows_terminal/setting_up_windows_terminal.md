@@ -1,6 +1,35 @@
 # Setting up Windows Terminal
 
-- Color Schemes: 
+## Managing Global Settings in `settings.json`
+
+
+## Using command-line arguments for Windows Terminal
+
+See this document for more details: https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows
+
+```bash
+wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; split-pane -H wsl.exe bash
+```
+[![demo split panes][#wt-demo-split-panes]][#wt-demo-split-panes]
+
+[#wt-demo-split-panes]: /resources/windows_terminal_multipane.png
+
+## GUID
+
+  The `guid` parameter for every entry in the `settings.json` profile file for the Windows Terminal, is essentially an unique id. 
+  
+  > TL;DR
+  > - In order to set a profile as the default profile you must enter the profile's GUID into the global "defaultProfile" setting.
+  >
+  > - GUIDS are not magical. They are not managed by some central authority. You don't have to ask anyone to generate or use a GUID. 
+  They're just numbers that are so big that their chances of clash are limited.
+  > 
+  > - How to generate:
+  >
+  >   - Powershell: `[guid]::NewGuid()`
+  >   - Linux: `uuidgen`
+
+## Color Schemes: 
   
   The color schemes can be changed as documented here: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes.
   

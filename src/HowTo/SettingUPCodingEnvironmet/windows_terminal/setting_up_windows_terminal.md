@@ -46,6 +46,8 @@ wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; spli
     - [x] [One Half Light][#one-half-light]:    `"colorScheme": "One Half Light"`
     - [x] [Tango Dark][#tango-dark]:            `"colorScheme": "Tango Dark"`
     - [x] [Tango Light][#tango-light]:          `"colorScheme": "Tango Light"`
+    - [x] [Solarized Dark][#solarized-dark]:    `"colorScheme": "Solarized Dark"`
+    - [x] [Solarized Light][#solarized-light]:  `"colorScheme": "Solarized Light"`
     
     [#campbell]: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#campbell
     [#campbell-ps]: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#campbell-powershell
@@ -54,6 +56,8 @@ wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; spli
     [#one-half-light]: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#one-half-light
     [#tango-dark]: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#tango-dark
     [#tango-light]: https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes#tango-light
+    [#solarized-dark]: https://blogs.windows.com/windowsdeveloper/2020/06/30/3-ways-to-customize-your-windows-terminal/
+    [#solarized-light]: https://blogs.windows.com/windowsdeveloper/2020/06/30/3-ways-to-customize-your-windows-terminal/
     
   - Custom color schemes: https://docs.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/custom-schemes
     - [x] [Frosted Glass][#forsted-glass]:           `"colorScheme": "Frost"`
@@ -144,3 +148,30 @@ PS C:\Users\raysu>
 > ```bash
 > Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 > ```
+
+
+## References
+
+1. [Tutorial: Set up Powerline in Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup) :star: :star: :star:
+
+1. [Powerline in PowerShell theme for Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/powerline-in-powershell)
+
+1. [Color schemes in Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes)
+
+1. [Custom Terminal guide](https://docs.microsoft.com/en-us/windows/terminal/custom-terminal-gallery/custom-schemes)
+
+1. [Global settings in Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/global-settings)
+
+1. [How to set user-specified `tabTitle`s](https://github.com/microsoft/terminal/issues/2241#issuecomment-716955598) :star: :star:
+
+1. [Using command-line arguments for Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows) :star:
+
+1. [Windows Terminal: Generating GUIDs For Your Profiles - _by_ Travis Colbert](https://traviscolbert.net/blog/windows-terminal-generating-guids-for-your-profiles/)
+
+1. [Set-ExecutionPolicy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7)
+
+1. [PowerShell ExecutionPolicies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7#powershell-execution-policies)
+
+1. [Beautify your Windows Terminal](https://dev.to/anupa/beautify-your-windows-terminal-1la8)
+
+1. [3 Ways to Customize Your Windows Terminal](https://blogs.windows.com/windowsdeveloper/2020/06/30/3-ways-to-customize-your-windows-terminal/)

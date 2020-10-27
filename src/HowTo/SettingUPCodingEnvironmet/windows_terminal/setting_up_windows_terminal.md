@@ -12,7 +12,7 @@ wt -p "Command Prompt" ; new-tab -p "Ubuntu" ; split-pane -p "Ubuntu-Zsh" ; spli
 ```
 [![demo split panes][#wt-demo-split-panes]][#wt-demo-split-panes]
 
-[#wt-demo-split-panes]: /resources/windows_terminal_multipane.png
+[#wt-demo-split-panes]: ./resources/windows_terminal_multipane.png
 
 ## GUID
 

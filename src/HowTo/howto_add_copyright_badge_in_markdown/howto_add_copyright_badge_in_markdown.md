@@ -149,6 +149,20 @@ Using: *HTTP-endpoint* in badgen.net
 https://badgen.net/https/copyright-badge-rbydof6akjgg.runkit.sh/America/Chicago+++name=sugatoray&color=green&start_year=2018
 ```
 
+## **Quick Use** :bulb:
+
+Copy and paste the following code block where you want to add the copyright badge. And then make necessary changes to the url against: `[#copyright-badge]`.
+
+```markdown
+[![copyright-logo][#copyright-badge]][#copyright-badge] 
+
+:bulb: :zap: :star2: [**How to add a copyright badge**][#howto-add-copyright-badge]
+
+[#copyright-badge]: https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2020
+[#howto-add-copyright-badge]: https://github.com/sugatoray/CodeSnippets/blob/master/src/HowTo/howto_add_copyright_badge_in_markdown/howto_add_copyright_badge_in_markdown.md
+```
+
+
 ---
 
 ## References

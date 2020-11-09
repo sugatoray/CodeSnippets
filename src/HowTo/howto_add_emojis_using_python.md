@@ -44,3 +44,12 @@ Python is fun ❤
 >>> print(emoji.emojize("Python is fun :red_heart:",variant="emoji_type"))
 Python is fun ❤️ #red heart, not black heart
 ```
+
+---
+
+[![copyright-logo][#copyright-badge]][#copyright-badge] 
+
+:bulb: :zap: :star2: [**How to add a copyright badge**][#howto-add-copyright-badge]
+
+[#copyright-badge]: https://badgen.net/runkit/copyright-badge-rbydof6akjgg/America/Chicago+++name=sugatoray&color=green&start_year=2020
+[#howto-add-copyright-badge]: https://github.com/sugatoray/CodeSnippets/blob/master/src/HowTo/howto_add_copyright_badge_in_markdown/howto_add_copyright_badge_in_markdown.md

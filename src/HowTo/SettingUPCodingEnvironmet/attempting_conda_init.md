@@ -1,10 +1,34 @@
+# How to access `conda` command from Powershell and CMD in Windows 10
+
+When you install `conda`, it by default asks you to use anaconda/miniconda prompt. However, if you want to access conda from PowerShell/CMD, you need to do this:
+
+## Step-1
+
+Open anaconda/miniconda prompt and run:
+
+```
+where conda
+```
+
+This will give an output similar to the following.
+
+```bash
 ## miniconda prompt
 (base) C:\Users\raysu>where conda
 C:\Users\raysu\Miniconda3\Library\bin\conda.bat
-C:\Users\raysu\Miniconda3\Scripts\conda.exe
+C:\Users\raysu\Miniconda3\Scripts\conda.exe          <<<---- You will need this
 C:\Users\raysu\Miniconda3\condabin\conda.bat
+```
 
+## Step-2
 
+Now you need to open Powershell and run "C:\Users\raysu\Miniconda3\Scripts\conda.exe init". 
+
+- This should make conda available to you on Powershell and CMD. 
+- Just make sure to close Powershell/CMD once and open again. 
+- Test by running `conda env list`.
+
+```bash
 ## Powershell
 raysu@ALPHA  ~                                                                                               [21:32]
 ❯ C:\Users\raysu\Miniconda3\Scripts\conda.exe init
@@ -36,7 +60,14 @@ modified      HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
 
 raysu@ALPHA  ~                                                                                               [21:33]
 ❯
+```
 
+
+## Check
+
+Run `conda env list`.
+
+```bash
 ## Open a new Powershell or CMD (now it works!!)
 C:\Users\raysu>conda env list
 # conda environments:
@@ -48,4 +79,5 @@ mlflow_env               C:\Users\raysu\Miniconda3\envs\mlflow_env
 pytorch_env              C:\Users\raysu\Miniconda3\envs\pytorch_env
 test_tfcpu_env           C:\Users\raysu\Miniconda3\envs\test_tfcpu_env
 test_tfgpu_env           C:\Users\raysu\Miniconda3\envs\test_tfgpu_env
+```
 

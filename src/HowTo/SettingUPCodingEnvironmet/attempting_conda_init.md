@@ -81,3 +81,10 @@ test_tfcpu_env           C:\Users\raysu\Miniconda3\envs\test_tfcpu_env
 test_tfgpu_env           C:\Users\raysu\Miniconda3\envs\test_tfgpu_env
 ```
 
+---
+
+## References
+
+1. ['Conda' is not recognized as internal or external command][#stackoverflow-q-44515769]
+
+[#stackoverflow-q-44515769]: https://stackoverflow.com/questions/44515769/conda-is-not-recognized-as-internal-or-external-command

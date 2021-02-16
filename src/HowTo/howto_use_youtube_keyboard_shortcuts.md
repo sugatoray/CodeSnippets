@@ -1,4 +1,4 @@
-# YouTube Keyboard Shortcuts
+# YouTube Keyboard Shortcuts :movie_camera: :fire:
 
 [![Keyboard Shortcuts Screenshot][#yt-keyboard-shortcuts-image]][#yt-keyboard-shortcuts-image]
 

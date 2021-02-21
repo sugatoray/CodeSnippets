@@ -49,3 +49,5 @@ Emoji cheat sheet for Campfire and GitHub.
 **Examples:**
 
 :fa-wifi: :fa-twitter: :fa-google-plus: :fa-git-square: :fa-github-alt: :fa-external-link-square:
+
+<i class="fas fa-accessible-icon"></i>

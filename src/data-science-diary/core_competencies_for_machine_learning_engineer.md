@@ -1,6 +1,8 @@
 Core Competencies
 -----------------
 
+> DISCLAIMER: The following content is sourced from a [course on AWS Educate](https://awseducate.instructure.com/courses/195/pages/knowledge-and-skills?module_item_id=4702).
+
 ![stock-photo-what-you-need-to-know-and-ha-458529.png](https://i.imgur.com/VIA9Ajk.png)
 ----------------------------------------------------------------------------------------------------------------------------------
 

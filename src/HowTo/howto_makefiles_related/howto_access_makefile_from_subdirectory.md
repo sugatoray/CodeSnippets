@@ -1,4 +1,4 @@
-# How to access a `Makefile` from a subdirecyory of your project
+# How to access a `Makefile` from a subdirectory of your project
 
 The following is a modification of the Makefile used in 
 [`PyTorchLightning/lightning-bolts`][#gh-repo-lightning_bolts] repo on GitHub.

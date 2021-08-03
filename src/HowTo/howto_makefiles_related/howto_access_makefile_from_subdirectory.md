@@ -114,3 +114,84 @@ format:
 	# yapf . -rip
 
 ```
+
+
+## Setting up dev-env
+
+In addition to the above script I have another shell script for setting up the environment 
+for a given open-source project (which does not share any `environment.yml` file out of the box).
+
+For example, the [`omry/omegaconf`][#gh-repo-omegaconf] repository does not have any 
+`environment.yml` file shared. But I prefer to have a dedicated miniconda environment 
+for each such project. The shell script `setupDevEnv.sh` is meant for installing everything 
+necessary for a project (in case I am not making any `environment.yml` file).
+
+```sh
+#!/bin/bash
+
+PROJECT_NAME="omegaconf"
+PROJECT_CONDA_ENV=$PROJECT_NAME"_env"
+
+# PROJECT_CONDA_ENV = omegaconf_env
+conda create -n $PROJECT_CONDA_ENV python=3.8 -qy
+conda activate $PROJECT_CONDA_ENV
+# My preferred packages
+conda install jupyter jupyterlab -y
+# For formatting, testing and coverage support
+conda install -c conda-forge autopep8 pytest pytest-cov coverage -y
+# For making custom cli using typer
+conda install -c conda-forge typer tqdm typer-cli -y
+# For linting support in .rst files
+conda install rstcheck -c conda-forge -y
+# Project specific packages
+pip install -r requirements/dev.txt -e .
+pre-commit install
+```
+
+To setup the environment, run: `. ./.vscode/setupDevEnv.sh` from the project root directory.
+
+> *I prefer to keep these personal setup/helper files under the `.vscode` folder, as that makes 
+sure these files will not be accidentally pushed to the repository. These files are meant for 
+only my use (albeit there is no personal/sensitive information in them).*
+
+## Using `setconda` command for quick startup
+
+I prefer to startup the VS Code terminals quickly with a command `setconda`, which 
+essentially runs `conda activate <environment-name>` for that project.
+
+For `omegaconf` project, I have it setup as follows. The important part is to place 
+this file under `.vscode` forlder: `omegaconf/.vscode/setconda.sh`. And then add the 
+following command to `~/.bashrc`:
+
+```sh
+# For setconda command
+alias setconda=". ./.vscode/setconda.sh"
+# For xmake command
+alias xmake="make -f ./.vscode/Makefile"
+```
+
+Here is the content of `omegaconf/.vscode/setconda.sh`, as an example:
+
+```sh
+#!/bin/bash
+
+### Info on conda environment
+# CREATED AS: conda create -n omegaconf_env python=3.8
+
+# To run this script from project root directory:
+# RUN: . .vscode/setconda.sh
+
+alias setconda='. ./.vscode/setconda.sh'
+#alias xmake="make -C ./.vscode"
+alias xmake="make -f ./.vscode/Makefile"
+
+PROJECT_NAME="omegaconf"
+PROJECT_CONDA_ENV=$PROJECT_NAME"_env"
+
+conda activate $PROJECT_CONDA_ENV
+
+unset \
+    PROJECT_NAME \
+    PROJECT_CONDA_ENV
+
+```

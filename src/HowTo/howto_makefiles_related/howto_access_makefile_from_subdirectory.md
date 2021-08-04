@@ -172,6 +172,10 @@ alias xmake="make -f ./.vscode/Makefile"
 
 Here is the content of `omegaconf/.vscode/setconda.sh`, as an example:
 
+> *Note: **option-2** is more modular*
+
+### Option-1
+
 ```sh
 #!/bin/bash
 
@@ -186,12 +190,120 @@ alias setconda='. ./.vscode/setconda.sh'
 alias xmake="make -f ./.vscode/Makefile"
 
 PROJECT_NAME="omegaconf"
-PROJECT_CONDA_ENV=$PROJECT_NAME"_env"
+PROJECT_CONDA_ENV="omegaconf_env"
 
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+COLOR_RED=$(tput setaf 1)
+COLOR_GREEN=$(tput setaf 2)
+COLOR_YELLOW=$(tput setaf 3)
+
+ENVNAME=$(echo -e "${COLOR_RED}${BOLD}${PROJECT_CONDA_ENV}${NORMAL}")
+PROJECT=$(echo -e "${COLOR_GREEN}${BOLD}${PROJECT_NAME}${NORMAL}")
+
+echo -e "\n⚙️ Activating conda environment... ⏳\n \n\t 🔥 ${BOLD} EnvName ${NORMAL}: ${ENVNAME} \n\t ✨ ${BOLD} Project ${NORMAL}: ${PROJECT} \n"
 conda activate $PROJECT_CONDA_ENV
 
 unset \
     PROJECT_NAME \
+    PROJECT_CONDA_ENV \
+    ENVNAME \
+    PROJECT \
+    BOLD \
+    NORMAL \
+    COLOR_RED \
+    COLOR_GREEN \
+    COLOR_YELLOW
+
+
+# REFERENCES
+#
+# Q: How to change color and format of text in shell/terminal?
+#
+# 1. https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux/20983251#20983251
+# 2. https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux/5947788#5947788
+# 3. https://stackoverflow.com/questions/2924697/how-does-one-output-bold-text-in-bash/2924755
+
+```
+
+### Option-2: *PREFERRED* 🔥 ⭐
+
+Here we breakdown the code into two files.
+
+**1. File: `.vscode/setconda.sh`**
+
+```sh
+#!/bin/bash
+
+### File: Setconda.sh
+
+# To run this script from project root directory:
+# RUN: . .vscode/setconda.sh
+
+alias setconda='. ./.vscode/setconda.sh'
+#alias xmake="make -C ./.vscode"
+alias xmake="make -f ./.vscode/Makefile"
+
+PROJECT_NAME="omegaconf"
+PROJECT_CONDA_ENV="omegaconf_env"
+
+formatsetconda $PROJECT_NAME $PROJECT_CONDA_ENV
+
+unset \
+    PROJECT_NAME \
     PROJECT_CONDA_ENV
+
+```
+
+**2. File: `~/.user-defined/user-defined.sh`**:
+
+We add the following code block to the file: `~/.user-defined/user-defined.sh`
+
+This will introduce a function `condaEnvActivate` and a rather self-explanatory *alias*
+`formatsetconda` to the shell. In order to load this user-defined command everytime, I prefer 
+adding the line, `. $HOME/".user-defined/user-defined.sh"` to `~/.bashrc` file.
+
+```sh
+# Function to format setconda output
+function condaEnvActivate(){
+    # This requires two input arguments. Example:
+    # condaEnvActivate $PROJECT_NAME $PROJECT_CONDA_ENV
+    PROJECT_NAME=$1
+    PROJECT_CONDA_ENV=$2
+    BOLD=$(tput bold)
+    NORMAL=$(tput sgr0)
+    COLOR_RED=$(tput setaf 1)
+    COLOR_GREEN=$(tput setaf 2)
+    COLOR_YELLOW=$(tput setaf 3)
+
+    ENVNAME=$(echo -e "${COLOR_RED}${BOLD}${PROJECT_CONDA_ENV}${NORMAL}")
+    PROJECT=$(echo -e "${COLOR_GREEN}${BOLD}${PROJECT_NAME}${NORMAL}")
+
+    echo -e "\n⚙️ Activating conda environment... ⏳\n \n\t 🔥 ${BOLD} EnvName ${NORMAL}: ${ENVNAME} \n\t ✨ ${BOLD} Project ${NORMAL}: ${PROJECT} \n"
+    conda activate $PROJECT_CONDA_ENV
+
+    unset \
+    	PROJECT_NAME \
+	PROJECT_CONDA_ENV \
+        ENVNAME \
+        PROJECT \
+        BOLD \
+        NORMAL \
+        COLOR_RED \
+        COLOR_GREEN \
+        COLOR_YELLOW
+
+    # REFERENCES
+    #
+    # Q: How to change color and format of text in shell/terminal?
+    #
+    # 1. https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux/20983251#20983251
+    # 2. https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux/5947788#5947788
+    # 3. https://stackoverflow.com/questions/2924697/how-does-one-output-bold-text-in-bash/2924755
+
+}
+
+# Alias for formatting setconda output
+alias formatsetconda='condaEnvActivate'
 
 ```

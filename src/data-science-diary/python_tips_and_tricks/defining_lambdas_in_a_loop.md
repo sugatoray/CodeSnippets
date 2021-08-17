@@ -18,6 +18,8 @@ for x in range(5):
 
 ## This will work 🟢
 
+[![run-on-replit](https://docs.replit.com/images/repls/run-on-replit.svg)](https://replit.com/@SUGATORAY/pythonlambdasinaloop#readme.md)
+
 ```python
 # method-1
 funcs = [lambda n = x: n**2 for x in range(5)]

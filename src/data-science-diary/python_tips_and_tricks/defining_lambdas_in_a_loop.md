@@ -1,4 +1,4 @@
-# Why do lambdas defined in a loop with different values all return the same result?
+# How to *correctly* define lambdas in a loop? 💡
 
 🎯 [source](https://docs.python.org/3/faq/programming.html#id10)
 

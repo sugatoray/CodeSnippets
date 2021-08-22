@@ -91,3 +91,50 @@ using `conda env list` command.
         # env_prompt: '({default_env}) '
         ```
     **Note**: The same has beed documented and answered in this [stackoverflow-question](https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570).
+    
+## How to install a library with `pip`
+
+source: 
+- https://stackoverflow.com/questions/30239152/specify-extras-require-with-pip-install-e ⭐
+- https://pip.pypa.io/en/stable/cli/pip_install/ 🔥
+- [pip-install-examples](https://pip.pypa.io/en/stable/cli/pip_install/#pip-install-examples) 🚀🚀🚀
+- https://github.com/pypa/packaging.python.org/blob/main/source/tutorials/installing-packages.rst#installing-setuptools-extras
+
+### Install from pypi package: `project`
+
+```sh
+# without any "extra"
+pip install project
+
+# with a single extra: extra0
+pip install "project[extra0]"
+
+# with a list of extras: extra0, extra1, extra2
+pip install "project[extra0,extra1,extra2]"
+```
+
+### Install from github project: `project`
+
+```sh
+# format
+pip install -e git://github.com/{ userName }/{ repoName }.git@{ tagName }#egg={ desiredEggName }
+```
+
+More examples
+
+```sh
+# without any "extra"
+pip install "git+https://github.com/user/project.git#egg=project"
+
+# with a single extra: extra0
+pip install -e "git+https://github.com/user/project.git#egg=project[extra0]"
+
+# with a list of extras: extra0, extra1, extra2
+pip install "git+https://github.com/user/project.git#egg=project[extra0,extra1,extra2]"
+```
+
+**An example with `lightning-flash` library.** ⭐⭐⭐
+
+```sh
+! pip install -Uqq "git+https://github.com/PyTorchLightning/lightning-flash.git#egg=lightning-flash[image]"
+```

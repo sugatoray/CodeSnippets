@@ -55,3 +55,6 @@ def save_uploaded_file(uploadedfile: UploadedFile, folder: str="tempDir"):
 ## References
 
 - https://docs.streamlit.io/en/stable/api.html#display-progress-and-status
+- https://discuss.streamlit.io/t/how-to-download-local-folder/3717
+- https://youtu.be/UyWEo-q4BGY?t=742
+- https://github.com/streamlit/streamlit/blob/develop/lib/streamlit/elements/file_uploader.py

@@ -127,7 +127,9 @@ Import the `.xml` file with bibliography into MS Word using **Manage Sources** f
 2. [Bibutils - *bib2xml*](http://bibutils.refbase.org/#bib2xml)
 3. Google Scholar: https://scholar.google.com/
 4. Wikipedia - BibTeX: https://en.wikipedia.org/wiki/BibTeX
-5. BibTeX Editor (online): https://truben.no/latex/bibtex/
+5. BibTeX Editor (online): 
+   1. https://truben.no/latex/bibtex/
+   2. https://zbib.org/
 6. Wikipedia BibTeX Generator: https://irl.github.io/bibwiki
 
 ---

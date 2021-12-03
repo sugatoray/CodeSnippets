@@ -11,7 +11,30 @@ gh release --help
 <p>
 
 ```sh
+$ gh release --help
 
+Manage GitHub releases
+
+USAGE
+  gh release <command> [flags]
+
+CORE COMMANDS
+  create:     Create a new release
+  delete:     Delete a release
+  download:   Download release assets
+  list:       List releases in a repository
+  upload:     Upload assets to a release
+  view:       View information about a release
+
+FLAGS
+  -R, --repo [HOST/]OWNER/REPO   Select another repository using the [HOST/]OWNER/REPO format
+
+INHERITED FLAGS
+  --help   Show help for command
+
+LEARN MORE
+  Use 'gh <command> <subcommand> --help' for more information about a command.
+  Read the manual at https://cli.github.com/manual
 ```
 
 </p>

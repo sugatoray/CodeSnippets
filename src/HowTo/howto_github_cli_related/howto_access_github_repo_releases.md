@@ -179,13 +179,14 @@ You can also dowload the whole archive using the common archive URL structure fo
     ```
 
 ```sh
-# -R, --repo              Select another repository using the [HOST/]OWNER/REPO format
-# -A, --archive format    (format is zip or tar.gz)
+# -R, --repo                  Select another repository using the [HOST/]OWNER/REPO format
+# -A, --archive format        (format is zip or tar.gz)
+# -p, --pattern stringArray   Download only assets that match a glob pattern
 
 ## Method-1: whole archive
 gh release download "v2021.11.29.00" \
     -R https://github.com/facebook/watchman \
-    -p --archive=zip # or use --archive=tar.gz
+    -p --archive="zip" # or use --archive=tar.gz
 
 ## Method-2: specific file
 OWNER="facebook"

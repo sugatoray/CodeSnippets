@@ -170,7 +170,7 @@ You can also dowload the whole archive using the common archive URL structure fo
 
 - Specific example
 
-    https://github.com/facebook/watchman/archive/refs/tags/v2021.11.29.00.zip
+    > `https://github.com/facebook/watchman/archive/refs/tags/v2021.11.29.00.zip`
 
 - Parametrized example
 

@@ -154,7 +154,9 @@ Options:
   <details>
   <summary>Screenshot of the Article: Click to Expand</summary>
   <p>
+
   ![article-image][#howto-kill-process-on-ubuntu-article-image]  
+  
   </p>
   </details>
 

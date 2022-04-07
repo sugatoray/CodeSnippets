@@ -4,6 +4,11 @@
 # Updating `~/.zshrc`
 >...steps here
 
+## Setting up Powerlevel10k Theme in Zsh
+
+For details see `powerlevel10k_setup.md`.
+
+
 # Some Useful Commands
 ## Creating an alias
 **Creating an alias** (a short command) to run a command. [See more here](https://linuxize.com/post/how-to-create-bash-aliases/)  

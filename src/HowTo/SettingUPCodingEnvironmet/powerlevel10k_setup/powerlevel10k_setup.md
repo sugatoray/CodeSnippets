@@ -4,6 +4,13 @@ See updated instructions for installation here:
 
 - https://github.com/romkatv/powerlevel10k#oh-my-zsh
 
+> **Note:**
+>
+> Whenever you make any changes inside `~/.zshrc` or `~/.p10k.zsh`, to see the effects do one of the following:
+> 
+> - close the current terminal and open a new terminal
+> - run `exec zsh` without closing the current terminal
+
 ## Steps
 
 1. Install with `oh-my-zsh`.
@@ -12,9 +19,26 @@ See updated instructions for installation here:
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
    ```
 
-   And copy the contents of the following file to `~/.p10k.zsh`:
+   This will create a folder `powerlevel10k` under `$ZSH_CUSTOM/themes`.
+   
+   ![image](https://user-images.githubusercontent.com/10201242/162110694-60dbc9f0-b3f4-4267-9b4b-842c4235a403.png)
 
-   - `sample_p10k.zsh`
+
+   Now, copy the contents of the following file to `~/.p10k.zsh`:
+
+   - [`sample_p10k.zsh`](sample_p10k.zsh)
+   - [`sample_zshrc`](sample_zshrc)
+   - 
+
+   This will set the terminal look like this:
+   
+   - Inside VS Code:
+   
+     ![image](https://user-images.githubusercontent.com/10201242/162108322-7dee7c57-8ef0-43ef-abd7-3957c6292f97.png)
+
+   - Inside ZSH in regular terminal:
+   
+     ![image](https://user-images.githubusercontent.com/10201242/162108633-e0384e37-a749-4ae9-b076-bea8f7396ca6.png)
 
 2. Add the following at the top of `~/.zshrc` file.
 

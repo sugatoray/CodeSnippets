@@ -13,7 +13,7 @@ See updated instructions for installation here:
 
 ## Steps
 
-### Install with `oh-my-zsh`.
+### 1. Install with `oh-my-zsh`.
 
    ```sh
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -39,7 +39,7 @@ See updated instructions for installation here:
    
      ![image](https://user-images.githubusercontent.com/10201242/162108633-e0384e37-a749-4ae9-b076-bea8f7396ca6.png)
 
-### Setup `~/zshrc`
+### 2. Setup `~/.zshrc`
 
    This is a sample `~/.zshrc` file
    - [`sample_zshrc`](sample_zshrc)
@@ -76,6 +76,7 @@ See updated instructions for installation here:
    ```sh
    # ZSH_THEME="agnoster"
    ```
+   
    And then add the following right after the line with `ZSH_THEME` variable.
    
    ```
@@ -87,3 +88,5 @@ See updated instructions for installation here:
    # POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="▶"
    # POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
    ```
+   
+   Later on, if you decide on using `agnoster` theme instead of `powerlevel10k`, just comment/uncomment out the line with desired theme. 

@@ -13,7 +13,7 @@ See updated instructions for installation here:
 
 ## Steps
 
-1. Install with `oh-my-zsh`.
+### Install with `oh-my-zsh`.
 
    ```sh
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -27,10 +27,9 @@ See updated instructions for installation here:
    Now, copy the contents of the following file to `~/.p10k.zsh`:
 
    - [`sample_p10k.zsh`](sample_p10k.zsh)
-   - [`sample_zshrc`](sample_zshrc)
-   - 
-
-   This will set the terminal look like this:
+   
+   Once you also setup the `~/.zshrc` file (as descrbed in the next step), 
+   this will set the terminal look like this:
    
    - Inside VS Code:
    
@@ -40,7 +39,12 @@ See updated instructions for installation here:
    
      ![image](https://user-images.githubusercontent.com/10201242/162108633-e0384e37-a749-4ae9-b076-bea8f7396ca6.png)
 
-2. Add the following at the top of `~/.zshrc` file.
+### Setup `~/zshrc`
+
+   This is a sample `~/.zshrc` file
+   - [`sample_zshrc`](sample_zshrc)
+
+1. Add the following at the top of `~/.zshrc` file.
 
    ```sh
    # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -52,7 +56,7 @@ See updated instructions for installation here:
    
    ```
 
-3. Add the following at the bottom of `~/.zshrc` file.
+2. Add the following at the bottom of `~/.zshrc` file.
 
    ```sh
    # For powerlevel10k
@@ -67,7 +71,7 @@ See updated instructions for installation here:
    
    ```
 
-4. Comment out the following line with `ZSH_THEME` variable:
+3. Comment out the following line with `ZSH_THEME` variable:
 
    ```sh
    # ZSH_THEME="agnoster"

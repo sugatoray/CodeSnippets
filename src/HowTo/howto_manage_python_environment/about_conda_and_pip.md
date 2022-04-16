@@ -14,9 +14,10 @@
 
 ## How to maintain a conda environment
 
-Please see the solution provided in the following stackoverflow answer.
+Please see the following references.
 
-- https://github.com/sugatoray/stackoverflow/blob/master/src/answers/Q_64662085/Q_64662085.md
+- [A sample `environment.yml` file with a list of useful commands](https://github.com/sugatoray/stackoverflow/blob/master/src/answers/Q_64662085/Q_64662085.md)
+- [Conda environments management - cheetsheat](https://gist.github.com/lucazav/daf0bdaa67fb676e799e08e26a943037)
 
 ### Updating Conda Environments
 

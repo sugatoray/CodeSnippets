@@ -12,22 +12,32 @@
 
 [#conda-config-condarc]: https://docs.conda.io/projects/conda/en/latest/configuration.html
 
+## How to maintain a conda environment
 
-# Updating Conda Environments
+Please see the solution provided in the following stackoverflow answer.
+
+- https://github.com/sugatoray/stackoverflow/blob/master/src/answers/Q_64662085/Q_64662085.md
+
+### Updating Conda Environments
+
 Source: https://docs.conda.io/projects/conda/en/latest/commands/update.html  
+
 **Command format**:  
+
 Here is a short version of what I use often. For more details see 
 [here](https://docs.conda.io/projects/conda/en/latest/commands/update.html).  
+
 ```bash
 conda update [-n Environment] [-c Channel] [package_spec]
 ```
 
-## Updating conda base environment: 
+#### Updating conda base environment: 
+
 ```bash
 conda update -n base -c defaults conda
 ```
 
-## Creating conda environment:
+### Creating conda environment:
 
 1. **Create an environment with a `-n` or `--name` flag**. 
 
@@ -95,14 +105,9 @@ conda update -n base -c defaults conda
         # env_prompt: '({default_env}) '
         ```
    
-   **Note**: The same has beed documented and answered in this [stackoverflow-question](https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570).
-    
-## How to maintain a conda environment
-
-Please see the solution provided in the following stackoverflow answer.
-
-- https://github.com/sugatoray/stackoverflow/blob/master/src/answers/Q_64662085/Q_64662085.md
-    
+   **Note**: The same has beed documented and answered in this [stackoverflow-question][_soq].
+   
+   [_soq]: https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570
     
 ## How to install a library with `pip`
 

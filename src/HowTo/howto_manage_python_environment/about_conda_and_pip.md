@@ -30,37 +30,40 @@ conda update -n base -c defaults conda
 ## Creating conda environment:
 
 1. **Create an environment with a `-n` or `--name` flag**. 
-We also specify the python version and install some libraries using conda in a 
-single line.  
+
+   We also specify the python version and install some libraries using conda in a single line.  
     ```bash
     conda create -n env_name python=3.7 numpy scipy matplotlib pandas
     ```
 1. **Create an environment from an `environment.yml` file**.  
-The environment is created under a directory path given by `--prefix` flag as shown 
-below. Preferably create the environment under a relative path for each project at: 
-`"./.env"` where `"."` is the root directory of the project repo. 
+
+   The environment is created under a directory path given by `--prefix` flag as shown 
+   below. Preferably create the environment under a relative path for each project at: 
+   `"./.env"` where `"."` is the root directory of the project repo. 
 
     ```bash
     conda env create --prefix ./.env -f envirnment.yml
     ```
-1. **Activation/deactivation of the environment**.  
-When activating an environment which is located at a non-default location, post 
-activation conda **_shows an entire path_** instead of just `(base)` or `(env_name)`. 
-Only environments created with a `-n` or `--name` flag show the `(env_name)` in 
-front of the path as the currently active conda environment -- this is convenient. 
-Additionally, the list of environments thus created with `-n` flag could be searched 
-using `conda env list` command.  
+1. **Activation/deactivation of the environment**.
 
-    So, there is a [quick fix](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#specifying-a-location-for-an-environment) to this. 
-    You need to update the `.condarc` file using 
-    `conda config --set env_prompt '({name})'` command. This will ensure that the 
-    environment name is shortened and shows the name of the `.env` directory only. 
+   When activating an environment which is located at a non-default location, post 
+   activation conda **_shows an entire path_** instead of just `(base)` or `(env_name)`. 
+   Only environments created with a `-n` or `--name` flag show the `(env_name)` in 
+   front of the path as the currently active conda environment -- this is convenient. 
+   Additionally, the list of environments thus created with `-n` flag could be searched 
+   using `conda env list` command.  
 
-    But you must change it back to the original setting (for the `env_prompt` variable), 
-    before deactivating the environment.
+   So, there is a [quick fix](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#specifying-a-location-for-an-environment) to this. 
+   You need to update the `.condarc` file using 
+   `conda config --set env_prompt '({name})'` command. This will ensure that the 
+   environment name is shortened and shows the name of the `.env` directory only. 
 
-    The following lines of code explain this method.
-    ```bash
+   But you must change it back to the original setting (for the `env_prompt` variable), 
+   before deactivating the environment.
+
+   The following lines of code explain this method.
+   
+   ```bash
     # for activating env
     conda config --set env_prompt '({name})'
     conda activate ./.env
@@ -70,7 +73,8 @@ using `conda env list` command.
     conda config --set env_prompt '({default_env})'
     conda deactivate
     conda activate base
-    ```
+   ```
+   
     + **Description of the `env_prompt` variable**  
     
         Source: [conda-config: `.condarc` file][#conda-config-condarc]
@@ -90,7 +94,15 @@ using `conda env list` command.
         # # 
         # env_prompt: '({default_env}) '
         ```
-    **Note**: The same has beed documented and answered in this [stackoverflow-question](https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570).
+   
+   **Note**: The same has beed documented and answered in this [stackoverflow-question](https://stackoverflow.com/questions/60122569/how-to-revert-back-to-default-behavior-of-env-prompt-parameter-in-condarc/60122570#60122570).
+    
+## How to maintain a conda environment
+
+Please see the solution provided in the following stackoverflow answer.
+
+- https://github.com/sugatoray/stackoverflow/blob/master/src/answers/Q_64662085/Q_64662085.md
+    
     
 ## How to install a library with `pip`
 

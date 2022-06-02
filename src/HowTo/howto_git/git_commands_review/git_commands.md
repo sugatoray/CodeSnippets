@@ -41,10 +41,11 @@ valuable there.
 ```
 
 After I saw this, I ran `git rebase --abort` and that fixed some of the things.
-VS Code was earlier showing 
+VS Code was earlier showing. But this was not enough. 
 
 [#so_git-pull-rebase]: https://stackoverflow.com/questions/34059893/what-does-git-pull-rebase-origin-master-means
 
+I kept getting errors while trying to pull from the remote. 
 
 ```sh
 CONFLICT (content): Merge conflict in .gitignore
@@ -54,3 +55,10 @@ hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
 hint: You can instead skip this commit: run "git rebase --skip".
 hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
 ```
+
+So, after I ran the following to fix it:
+- `git add .github/workflows/checks.yml`: Added the file with unchecked changes to staging.
+- `git stash --staged -m "save workflow changes"`: This added the staged content to a stash (and removed the changed file content from the branch). 
+- `git rebase --continue`: This rebased the branch with its remote.
+- Note that alternatively I could have done the following as well:
+  - `git pull --rebase origin master`: This will pull from the remote (`origin`) repository's `master` branch and **`rebase`** the current branch with the contents of the remote master branch. 

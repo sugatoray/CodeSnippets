@@ -6,6 +6,8 @@ Create a file called `.ssh_setup` at location: `~`.
 ## File: `~/.ssh_setup`
 
 ```bash
+#!/bin/bash
+
 ##################################### FILE INFO #####################################
 ## FILENAME: ~/.ssh_setup
 ## OBJECTIVE:

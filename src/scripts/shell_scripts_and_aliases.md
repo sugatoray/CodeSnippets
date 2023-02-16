@@ -32,7 +32,7 @@ enquote() { (_G=$@; a=(); for g in ${_G}; do a+=("\"${g}\", "); done; a="${a[@]}
 #   output: hello
 alias tolower='tr [:upper:] [:lower:]'
 # Convert to uppercase:
-#   example: echo "Hello" | tolower
+#   example: echo "Hello" | toupper
 #   output: HELLO
 alias toupper='tr [:lower:] [:upper:]'
 

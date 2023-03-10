@@ -1,5 +1,7 @@
 # A compilation of various functions and aliases
 
+## Single Line Functions and Aliases
+
 ```sh
 # A function to print a numeric value with a given number of leading digits
 padnum() { VALUE=$1; NUMDIGITS=$2; $(which python3) -c "print(f'{${VALUE}:0${NUMDIGITS:-5}}')"; unset VALUE NUMDIGITS; }
@@ -65,7 +67,7 @@ alias timestampx='date +%Y%m%d %H:%M:%S'
 ## Create backup (tar.gz) files
 # source: sending output to logfile and console: https://stackoverflow.com/a/18462920/8474894
 stringrep() { (_char=$1; _numrep=${2:-20}; _PYTHON=${3:-$(which python3)}; if [[ -z "${_numrep}" ]]; then _numrep=20; fi; "${_PYTHON}" -c "print('${_char}'*${_numrep})"; unset _char _numrep;); }
-createpkg() { (_SEP=$(stringrep - 60); _PORTFOLIO=${PROJ_PORTFOLIO:-Auto}; x_WFTKT=${1:-00000}; _ADTKT=${2:-00000}; _PROJ_PATH="/sasdata/crptrs1/pad"; _LOGDIRNAME="logs"; if [[ -z "${_WFTKT}" ]]; then _WFTKT=00000; fi; if [[ -z "${_ADTKT}" ]]; then _ADTKT=00000; fi; _SOURCE_PATH="${_PROJ_PATH}/Truist/${_PORTFOLIO}"; if [[ -d "${_SOURCE_PATH}" ]]; then _CWD=$(realpath $(pwd)); _TIMESTAMP=$(date +%Y%m%d_%H%M%S); _TARGET_PATH="${_PROJ_PATH}/DevOps/${_PORTFOLIO}"; _TAR_GZ_FILE_PATH="${_TARGET_PATH}/codefreeze/code_${_PORTFOLIO}_WF${_WFTKT}_AD${_ADTKT}_${_TIMESTAMP}_package.tar.gz"; _LOGFILE_PATH="${_TARGET_PATH}/${_LOGDIRNAME}/$(basename ${_TAR_GZ_FILE_PATH} | cut -d '.' -f1).log"; mkdir -p $(dirname ${_LOGFILE_PATH}); exec 3>&1 1>>${_LOGFILE_PATH} 2>&1; _HEADER="\n- [x] User: \`${USER}\`\n- [x] Timestamp: \`${_TIMESTAMP}\`  (YYYY-MM-DD HH:MM:SS)\n- [x] Logfile: \`${_LOGFILE_PATH}\`\n- [x] Portfolio Source Location: \`${_SOURCE_PATH}\`\n- [x] Archiving Portfolio Code: ${_PORTFOLIO}\n"; echo -e "\n${_SEP}\n\n# Process Log:\n${_HEADER}${_SEP}\n\n" | tee /dev/fd/3 && cd ${_SOURCE_PATH} && tar -cvzf ${_TAR_GZ_FILE_PATH} ./code; if [[ -f "${_TAR_GZ_FILE_PATH}" ]]; then echo -e "\n${_SEP}\n\n## [x] Portfolio: \`${_PORTFOLIO}\`\n${_HEADER}\n\n### [x] Ticket Details:\n\n- [x] WorkFront Ticket: \`${_WFTKT}\`\n- [x] Azure DevOps WorkItem: \`#${_ADTKT}\`\n\n### [x] Code Archive File:\n\n- [x] Path: \`${_TAR_GZ_FILE_PATH}\`\n  - [x] Location: \`$(dirname ${_TAR_GZ_FILE_PATH})\`\n  - [x] Location: \`$(basename ${_TAR_GZ_FILE_PATH})\`\n- [x] SHA256 Hash: \`$(genhash-sha256 ${_TAR_GZ_FILE_PATH})\`\n\n- [x] Status: $(if [[ $? == 0 ]]; then echo 'SUCCESS [x]'; else echo 'FAILURE [x]'; fi;)\n${_SEP}\n\n" | tee /dev/fd/3; unset _TAR_GZ_FILE_PATH; fi; cd ${_CWD}; fi; unset _WFTKT _AD_TKT _SOURCE_PATH _TARGET_PATH _LOGFILE_PATH _HEADER;) }
+createpkg() { (_SEP=$(stringrep - 60); _PORTFOLIO=${PROJ_PORTFOLIO:-Auto}; _WFTKT=${1:-00000}; _ADTKT=${2:-00000}; _PROJ_PATH="/sasdata/crptrs1/pad"; _LOGDIRNAME="logs"; if [[ -z "${_WFTKT}" ]]; then _WFTKT=00000; fi; if [[ -z "${_ADTKT}" ]]; then _ADTKT=00000; fi; _SOURCE_PATH="${_PROJ_PATH}/Truist/${_PORTFOLIO}"; if [[ -d "${_SOURCE_PATH}" ]]; then _CWD=$(realpath $(pwd)); _TIMESTAMP=$(date +%Y%m%d_%H%M%S); _TARGET_PATH="${_PROJ_PATH}/DevOps/${_PORTFOLIO}"; _TAR_GZ_FILE_PATH="${_TARGET_PATH}/codefreeze/code_${_PORTFOLIO}_WF${_WFTKT}_AD${_ADTKT}_${_TIMESTAMP}_package.tar.gz"; _LOGFILE_PATH="${_TARGET_PATH}/${_LOGDIRNAME}/$(basename ${_TAR_GZ_FILE_PATH} | cut -d '.' -f1).log"; mkdir -p $(dirname ${_LOGFILE_PATH}); exec 3>&1 1>>${_LOGFILE_PATH} 2>&1; _HEADER="\n- [x] User: \`${USER}\`\n- [x] Timestamp: \`${_TIMESTAMP}\`  (YYYY-MM-DD HH:MM:SS)\n- [x] Logfile: \`${_LOGFILE_PATH}\`\n- [x] Portfolio Source Location: \`${_SOURCE_PATH}\`\n- [x] Archiving Portfolio Code: ${_PORTFOLIO}\n"; echo -e "\n${_SEP}\n\n# Process Log:\n${_HEADER}${_SEP}\n\n" | tee /dev/fd/3 && cd ${_SOURCE_PATH} && tar -cvzf ${_TAR_GZ_FILE_PATH} ./code; if [[ -f "${_TAR_GZ_FILE_PATH}" ]]; then echo -e "\n${_SEP}\n\n## [x] Portfolio: \`${_PORTFOLIO}\`\n${_HEADER}\n\n### [x] Ticket Details:\n\n- [x] WorkFront Ticket: \`${_WFTKT}\`\n- [x] Azure DevOps WorkItem: \`#${_ADTKT}\`\n\n### [x] Code Archive File:\n\n- [x] Path: \`${_TAR_GZ_FILE_PATH}\`\n  - [x] Location: \`$(dirname ${_TAR_GZ_FILE_PATH})\`\n  - [x] Location: \`$(basename ${_TAR_GZ_FILE_PATH})\`\n- [x] SHA256 Hash: \`$(genhash-sha256 ${_TAR_GZ_FILE_PATH})\`\n\n- [x] Status: $(if [[ $? == 0 ]]; then echo 'SUCCESS [x]'; else echo 'FAILURE [x]'; fi;)\n${_SEP}\n\n" | tee /dev/fd/3; unset _TAR_GZ_FILE_PATH; fi; cd ${_CWD}; fi; unset _WFTKT _AD_TKT _SOURCE_PATH _TARGET_PATH _LOGFILE_PATH _HEADER;) }
 
 ## Search for Passwords
 # for f in $(ls .); do grep -nHi -E "password=\"(\&\S+\.)?\"" $f; done;
@@ -80,4 +82,103 @@ mkfile ~/.ssh/authorized_keys
 mkfile ~/.ssh/sshd_config
 mkfile ~/.ssh_setup
 
+```
+
+## Multiline Functions
+
+Here we expand some of the single line shellscript functions into multilines 
+for enhanced readability and maintainability.
+
+```sh
+
+stringrep() { (
+    #----------------
+    # Example Usage:
+    # stringrep - 30
+    #----------------
+    _char=$1; 
+    _numrep=${2:-20}; 
+    _PYTHON=${3:-$(which python3)}; 
+    if [[ -z "${_numrep}" ]]; then _numrep=20; fi; 
+    "${_PYTHON}" -c "print('${_char}'*${_numrep})"; 
+    unset _char _numrep;
+    )
+}
+
+createpkg() { (
+    # read in portfolio name from the environment variable ${PROJ_PORTFOLIO}
+    _PORTFOLIO=${PROJ_PORTFOLIO:-Auto}; 
+    # workfront ticket number
+    _WFTKT=${1:-00000}; 
+    # azure-devops ticket (workitem) number
+    _ADTKT=${2:-00000}; 
+    # define the path of the project root
+    _PROJ_PATH="/sasdata/crptrs1/pad"; 
+    # define the name of the logfile directory
+    _LOGDIRNAME="logs"; 
+    # generate and save formatted-separator for log and console outputs
+    _SEP=$(stringrep - 60); 
+    # assign default values if empty value is passed
+    if [[ -z "${_WFTKT}" ]]; then _WFTKT=00000; fi; 
+    if [[ -z "${_ADTKT}" ]]; then _ADTKT=00000; fi; 
+    # define source folder path of the portfolio
+    _SOURCE_PATH="${_PROJ_PATH}/Truist/${_PORTFOLIO}"; 
+    # process iff valid source path: ${_SOURCE_PATH}
+    if [[ -d "${_SOURCE_PATH}" ]]; then 
+        # capture current working directory (full path)
+        _CWD=$(realpath $(pwd)); 
+        # generate timestamp string to use in "*.tar.gz" filename
+        _TIMESTAMP=$(date +%Y%m%d_%H%M%S); 
+        # define target folder path of the portfolio
+        _TARGET_PATH="${_PROJ_PATH}/DevOps/${_PORTFOLIO}";
+        _TAR_GZ_FILE_PATH="${_TARGET_PATH}/codefreeze/code_${_PORTFOLIO}_WF${_WFTKT}_AD${_ADTKT}_${_TIMESTAMP}_package.tar.gz"; 
+        _LOGFILE_PATH="${_TARGET_PATH}/${_LOGDIRNAME}/$(basename ${_TAR_GZ_FILE_PATH} | cut -d '.' -f1).log"; 
+        mkdir -p $(dirname ${_LOGFILE_PATH}); 
+        exec 3>&1 1>>${_LOGFILE_PATH} 2>&1; 
+        # prepare message header
+        _HEADER="";
+        _HEADER="${_HEADER}\n- [x] User: \`${USER}\`";
+        _HEADER="${_HEADER}\n- [x] Timestamp: \`${_TIMESTAMP}\`  (YYYY-MM-DD HH:MM:SS)";
+        _HEADER="${_HEADER}\n- [x] Logfile: \`${_LOGFILE_PATH}\`";
+        _HEADER="${_HEADER}\n- [x] Portfolio Source Location: \`${_SOURCE_PATH}\`";
+        _HEADER="${_HEADER}\n- [x] Archiving Portfolio Code: ${_PORTFOLIO}\n"; 
+        # prepare message preamble (formatted header)
+        _PREAMBLE="\n${_SEP}\n\n# Process Log:\n${_HEADER}${_SEP}\n\n";
+        # send preamble to both logfile and the console
+        echo -e "${_PREAMBLE}" | tee /dev/fd/3 \
+            # change directory to the ${_SOURCE_PATH}
+            && cd ${_SOURCE_PATH} \
+            # create "*.tar.gz" file from the "code" folder contents
+            && tar -cvzf ${_TAR_GZ_FILE_PATH} ./code; 
+        # conditionally prepare log message body iff the previous command was successful
+        if [[ -f "${_TAR_GZ_FILE_PATH}" ]]; then 
+            # prepare message body
+            _BODY="";
+            _BODY="${_BODY}\n### [x] Ticket Details:\n";
+            _BODY="${_BODY}\n- [x] WorkFront Ticket: \`${_WFTKT}\`";
+            _BODY="${_BODY}\n- [x] Azure DevOps WorkItem: \`#${_ADTKT}\`\n";
+            _BODY="${_BODY}\n### [x] Code Archive File:\n\n- [x] Path: \`${_TAR_GZ_FILE_PATH}\`";
+            _BODY="${_BODY}\n  - [x] Location: \`$(dirname ${_TAR_GZ_FILE_PATH})\`";
+            _BODY="${_BODY}\n  - [x] Location: \`$(basename ${_TAR_GZ_FILE_PATH})\`";
+            _BODY="${_BODY}\n- [x] SHA256 Hash: \`$(genhash-sha256 ${_TAR_GZ_FILE_PATH})\`\n";
+            _BODY="${_BODY}\n- [x] Status: $(if [[ $? == 0 ]]; then echo 'SUCCESS [x]'; else echo 'FAILURE [x]'; fi;)";
+            # prepare complete message
+            _MESSAGE="\n${_SEP}\n\n## [x] Portfolio: \`${_PORTFOLIO}\`\n${_HEADER}\n${_BODY}\n${_SEP}\n\n";
+            # send message to both logfile and the console
+            echo -e "${_MESSAGE}" | tee /dev/fd/3; 
+            unset _BODY _MESSAGE; 
+        else:
+            # send error message to both logfile and the console
+            echo -e "ERROR:: Archive file failed to generate at path: \`${_TAR_GZ_FILE_PATH}\`\n" | tee /dev/fd/3;
+        fi; 
+        # change directory back to original working directory
+        cd ${_CWD}; 
+        unset _CWD _TIMESTAMP _TARGET_PATH _TAR_GZ_FILE_PATH _LOGFILE_PATH _HEADER _PREAMBLE;
+    else:
+        # send error message to both logfile and the console
+        echo -e "ERROR:: Invalid Source Path: \`${_SOURCE_PATH}\`\n" | tee /dev/fd/3;
+    fi; 
+    unset _WFTKT _ADTKT _SOURCE_PATH _LOGDIRNAME _PORTFOLIO;
+    ) 
+}
 ```

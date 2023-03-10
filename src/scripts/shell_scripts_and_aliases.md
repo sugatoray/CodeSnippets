@@ -131,9 +131,13 @@ createpkg() { (
         _TIMESTAMP=$(date +%Y%m%d_%H%M%S); 
         # define target folder path of the portfolio
         _TARGET_PATH="${_PROJ_PATH}/DevOps/${_PORTFOLIO}";
+        # define archive filename: *.tar.gz
         _TAR_GZ_FILE_PATH="${_TARGET_PATH}/codefreeze/code_${_PORTFOLIO}_WF${_WFTKT}_AD${_ADTKT}_${_TIMESTAMP}_package.tar.gz"; 
+        # define logfile path (generated from the archive file's name)
         _LOGFILE_PATH="${_TARGET_PATH}/${_LOGDIRNAME}/$(basename ${_TAR_GZ_FILE_PATH} | cut -d '.' -f1).log"; 
+        # create logfile directory if it does not exist already
         mkdir -p $(dirname ${_LOGFILE_PATH}); 
+        # set the output to route to both logfile and the console
         exec 3>&1 1>>${_LOGFILE_PATH} 2>&1; 
         # prepare message header
         _HEADER="";
@@ -150,9 +154,9 @@ createpkg() { (
             && cd ${_SOURCE_PATH} \
             # create "*.tar.gz" file from the "code" folder contents
             && tar -cvzf ${_TAR_GZ_FILE_PATH} ./code; 
-        # conditionally prepare log message body iff the previous command was successful
+        # conditionally prepare log summary body iff the previous command was successful
         if [[ -f "${_TAR_GZ_FILE_PATH}" ]]; then 
-            # prepare message body
+            # prepare summary body
             _BODY="";
             _BODY="${_BODY}\n### [x] Ticket Details:\n";
             _BODY="${_BODY}\n- [x] WorkFront Ticket: \`${_WFTKT}\`";
@@ -161,24 +165,35 @@ createpkg() { (
             _BODY="${_BODY}\n  - [x] Location: \`$(dirname ${_TAR_GZ_FILE_PATH})\`";
             _BODY="${_BODY}\n  - [x] Location: \`$(basename ${_TAR_GZ_FILE_PATH})\`";
             _BODY="${_BODY}\n- [x] SHA256 Hash: \`$(genhash-sha256 ${_TAR_GZ_FILE_PATH})\`\n";
-            _BODY="${_BODY}\n- [x] Status: $(if [[ $? == 0 ]]; then echo 'SUCCESS [x]'; else echo 'FAILURE [x]'; fi;)";
-            # prepare complete message
-            _MESSAGE="\n${_SEP}\n\n## [x] Portfolio: \`${_PORTFOLIO}\`\n${_HEADER}\n${_BODY}\n${_SEP}\n\n";
-            # send message to both logfile and the console
-            echo -e "${_MESSAGE}" | tee /dev/fd/3; 
-            unset _BODY _MESSAGE; 
+            _BODY="${_BODY}\n- [x] Status: $(if [[ $? -eq 0 ]]; then echo 'SUCCESS [x]'; else echo 'FAILURE [x]'; fi;)";
+            # prepare complete summary
+            _SUMMARY="\n${_SEP}\n\n## [x] Portfolio: \`${_PORTFOLIO}\`\n${_HEADER}\n${_BODY}\n${_SEP}\n\n";
+            # send summary to both logfile and the console
+            echo -e "${_SUMMARY}" | tee /dev/fd/3; 
+            unset _BODY _SUMMARY; 
         else:
             # send error message to both logfile and the console
             echo -e "ERROR:: Archive file failed to generate at path: \`${_TAR_GZ_FILE_PATH}\`\n" | tee /dev/fd/3;
         fi; 
         # change directory back to original working directory
         cd ${_CWD}; 
-        unset _CWD _TIMESTAMP _TARGET_PATH _TAR_GZ_FILE_PATH _LOGFILE_PATH _HEADER _PREAMBLE;
+        unset \
+            _CWD \
+            _TIMESTAMP \
+            _TARGET_PATH \
+            _TAR_GZ_FILE_PATH \
+            _LOGFILE_PATH \
+            _HEADER _PREAMBLE;
     else:
         # send error message to both logfile and the console
         echo -e "ERROR:: Invalid Source Path: \`${_SOURCE_PATH}\`\n" | tee /dev/fd/3;
     fi; 
-    unset _WFTKT _ADTKT _SOURCE_PATH _LOGDIRNAME _PORTFOLIO;
+    unset \
+        _WFTKT \
+        _ADTKT \
+        _SOURCE_PATH \
+        _LOGDIRNAME \
+        _PORTFOLIO;
     ) 
 }
 ```

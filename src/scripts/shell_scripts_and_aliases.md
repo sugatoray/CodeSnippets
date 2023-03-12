@@ -89,8 +89,24 @@ getPartYYYYMM() { (echo ${1:-$(date +%d:%Y%m)} | cut -d ":" -f2) }
 ## Func: generate a list of YYYYMM values with a start and stop specification
 # Example:
 # command: `genYYYMM 202101 202305` | output: `echo -e "1:202101\n2:202102\n...\n29:202305"`
-genYYYYMM() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _NOINDEX=${3:-true}; _START_YYYY=$(pystr ${_START} :4); _STOP_YYYY=$(pystr ${_STOP} :4); _START_MM=$(pystr ${_START} -2:); _STOP_MM=$(pystr ${_STOP} -2:); idx=0; for YYYY in {${_START_YYYY}..${_STOP_YYYY}}; do for MM in {${_START_MM}..${_STOP_MM}}; do idx=$(expr $idx + 1); YYYYMM=${YYYY}${MM}; if [[ ${_START} -le ${YYYYMM} && ${_STOP} -ge ${YYYYMM} ]]; then if [[ "${_NOINDEX}" == "true" ]]; then _PKG="${YYYYMM}"; else _PKG="${idx}:${YYYYMM}"; fi; echo -e "${_PKG}"; fi; done; done; unset _START _START_YYYY _START_MM _STOP _STOP_YYYY _STOP_MM YYYY MM YYYYMM _PKG;) }
+genYYYYMM() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _NOINDEX=${3:-true}; _START_YYYY=$(pystr ${_START} :4); _STOP_YYYY=$(pystr ${_STOP} :4); _START_MM=$(pystr ${_START} -2:); _STOP_MM=$(pystr ${_STOP} -2:); idx=0; for YYYY in $(seq ${_START_YYYY} ${_STOP_YYYY}); do for MM in {01..12}; do idx=$(expr $idx + 1); YYYYMM=${YYYY}${MM}; if [[ ${_START} -le ${YYYYMM} && ${_STOP} -ge ${YYYYMM} ]]; then if [[ "${_NOINDEX}" == "true" ]]; then _PKG="${YYYYMM}"; else _PKG="${idx}:${YYYYMM}"; fi; echo -e "${_PKG}"; fi; done; done; unset _START _START_YYYY _START_MM _STOP _STOP_YYYY _STOP_MM YYYY MM YYYYMM _PKG;) }
 
+## Func: generate SQL for tables with UNION ALL
+# Example:
+# command: `genSQLUnionAllTables 202101 202105 out some_table_name`
+# output:
+# select * from (
+#         select &COL_NAMES. from outputs.pad_lns_auto_202101
+#         ${_UNION_TYPE}
+#         select &COL_NAMES. from outputs.pad_lns_auto_202102
+#         ${_UNION_TYPE}
+#         select &COL_NAMES. from outputs.pad_lns_auto_202103
+#         ${_UNION_TYPE}
+#         select &COL_NAMES. from outputs.pad_lns_auto_202104
+#         ${_UNION_TYPE}
+#         select &COL_NAMES. from outputs.pad_lns_auto_202105
+# )
+genSQLUnionAllTables() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _LIBREF=${3:-outputs}; _TABLE_PREFIX=${4:-pad_lns_auto}; _UNION_TYPE=${5:-"UNION ALL"}; idx=0; _SQL=""; for YYYYMM in $(genYYYYMM ${_START} ${_STOP}); do idx=$(expr $idx + 1); _SQL="${_SQL}$(if [[ $idx == 1 ]]; then echo ''; else echo '\n\t${_UNION_TYPE}'; fi;)\n\tselect &COL_NAMES. from ${_LIBREF}.${_TABLE_PREFIX}_${YYYYMM}"; done; echo -e "select * from (${_SQL}\n)"; unset _START _STOP _LIBREF _TABLE_PREFIX _UNION_TYPE YYYYMM idx _SQL;) }
 
 ## Setting up SSH
 mkdir -p ~/.ssh

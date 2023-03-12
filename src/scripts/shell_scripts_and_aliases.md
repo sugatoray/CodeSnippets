@@ -97,16 +97,16 @@ genYYYYMM() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _N
 # output:
 # select * from (
 #         select &COL_NAMES. from out.some_table_name_202101
-#         ${_UNION_TYPE}
+#         UNION ALL
 #         select &COL_NAMES. from out.some_table_name_202102
-#         ${_UNION_TYPE}
+#         UNION ALL
 #         select &COL_NAMES. from out.some_table_name_202103
-#         ${_UNION_TYPE}
+#         UNION ALL
 #         select &COL_NAMES. from out.some_table_name_202104
-#         ${_UNION_TYPE}
+#         UNION ALL
 #         select &COL_NAMES. from out.some_table_name_202105
 # )
-genSQLUnionAllTables() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _LIBREF=${3:-outputs}; _TABLE_PREFIX=${4:-pad_lns_auto}; _UNION_TYPE=${5:-"UNION ALL"}; idx=0; _SQL=""; for YYYYMM in $(genYYYYMM ${_START} ${_STOP}); do idx=$(expr $idx + 1); _SQL="${_SQL}$(if [[ $idx == 1 ]]; then echo ''; else echo '\n\t${_UNION_TYPE}'; fi;)\n\tselect &COL_NAMES. from ${_LIBREF}.${_TABLE_PREFIX}_${YYYYMM}"; done; echo -e "select * from (${_SQL}\n)"; unset _START _STOP _LIBREF _TABLE_PREFIX _UNION_TYPE YYYYMM idx _SQL;) }
+genSQLUnionAllTables() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _LIBREF=${3:-outputs}; _TABLE_PREFIX=${4:-pad_lns_auto}; _UNION_TYPE=${5:-"UNION ALL"}; idx=0; _SQL=""; for YYYYMM in $(genYYYYMM ${_START} ${_STOP}); do idx=$(expr $idx + 1); _SQL="${_SQL}$(if [[ $idx == 1 ]]; then echo ""; else echo "\n\t${_UNION_TYPE}"; fi;)\n\tselect &COL_NAMES. from ${_LIBREF}.${_TABLE_PREFIX}_${YYYYMM}"; done; echo -e "select * from (${_SQL}\n)"; unset _START _STOP _LIBREF _TABLE_PREFIX _UNION_TYPE YYYYMM idx _SQL;) }
 
 ## Setting up SSH
 mkdir -p ~/.ssh

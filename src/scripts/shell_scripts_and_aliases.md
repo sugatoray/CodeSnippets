@@ -78,6 +78,19 @@ prepdirs() { (_PORTFOLIO_NAME=$1; _FOLDERS=${2:-"code codefreeze extractor logs 
 # for f in $(ls .); do grep -nHi -E "password=\"(\&\S+\.)?\"" $f; done;
 searchpass() { (_PATH=${1:-$(pwd)}; _HOW=$(echo ${2:-"--simple"} | xargs); _SEP=$(stringrep - 60); if [[ ${_HOW} == "-s" || ${_HOW} == "-simple" ]]; then _SEARCHWITH="(\S+)?"; else _SEARCHWITH="(\&\S+\.)?"; fi; _SEARCH_PATTERN="password=\"${_SEARCHWITH}\""; echo -e "\n${_SEP}\n\nPath: $(realpath ${_PATH})\nSearch Pattern: \"${_SEARCH_PATTERN}\"\n\n${_SEP}\n\n"; if [[ -d "${_PATH}" ]]; then _CWD="$(realpath $(pwd))"; cd ${_PATH}; for f in $(ls ${_PATH}); do if [[ -f "${f}" ]]; then grep -nH -E "${_SEARCH_PATTERN}" "${_PATH}/${f}"; fi; done; cd ${_CWD}; fi; unset f _PATH _HOW _CWD _SEARCHWITH _SEARCH_PATTERN _SEP;) }
 
+## YYYYMM Related
+# Example:
+# command: `pystr 202306 2:` | output: `2306`
+pystr() { (_PYTHON=$(which python3); ${_PYTHON} -c "print(str(${1})[${2:-:}])";) }
+## Func: extract `YYYYMM` part from a string with the format `##:YYYYMM`
+# Example:
+# commdand `getPartYYYYMM 33:202309` | output: `202309`
+getPartYYYYMM() { (echo ${1:-$(date +%d:%Y%m)} | cut -d ":" -f2) }
+## Func: generate a list of YYYYMM values with a start and stop specification
+# Example:
+# command: `genYYYMM 202101 202305` | output: `echo -e "1:202101\n2:202102\n...\n29:202305"`
+genYYYYMM() { (_START=${1:-202101}; _STOP=${2:-$(expr $(date +%d:%Y%m) - 2)}; _NOINDEX=${3:-true}; _START_YYYY=$(pystr ${_START} :4); _STOP_YYYY=$(pystr ${_STOP} :4); _START_MM=$(pystr ${_START} -2:); _STOP_MM=$(pystr ${_STOP} -2:); idx=0; for YYYY in {${_START_YYYY}..${_STOP_YYYY}}; do for MM in {${_START_MM}..${_STOP_MM}}; do idx=$(expr $idx + 1); YYYYMM=${YYYY}${MM}; if [[ ${_START} -le ${YYYYMM} && ${_STOP} -ge ${YYYYMM} ]]; then if [[ "${_NOINDEX}" == "true" ]]; then _PKG="${YYYYMM}"; else _PKG="${idx}:${YYYYMM}"; fi; echo -e "${_PKG}"; fi; done; done; unset _START _START_YYYY _START_MM _STOP _STOP_YYYY _STOP_MM YYYY MM YYYYMM _PKG;) }
+
 
 ## Setting up SSH
 mkdir -p ~/.ssh

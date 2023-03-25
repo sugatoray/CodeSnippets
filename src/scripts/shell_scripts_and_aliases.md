@@ -231,3 +231,76 @@ createpkg() { (
     )
 }
 ```
+
+## Variable Substitution in a Script
+
+### Method-1: `with shell-script`
+
+Reads in a file and looks for a specific line where a given environment variable is exported and returns that line.
+
+Usage: `varfetch <ENV_VAR_NAME> <FILE_PATH>`
+
+Example: `varfetch GIT_USER_NAME ./trialsub.sh`
+
+```bash
+varfetch() { (cat ${2:-${_FILEPATH:-trialsub.sh}} | grep -nE "^export ${1:-${_TARGET_VARIABLE:-GIT_USER_NAME}}=\"(.*)\"" | cut -d ":" -f2; unset _FILEPATH _TARGET_VARIABLE;); }
+```
+
+Where, sa sample `trialsub.sh` file is as follows. But you can replace it with anything you like.
+
+```sh
+#!/bin/bash
+
+export GIT_USER_NAME="Your Name"
+export GIT_USER_EMAIL="your.name@work.com"
+# some other text
+echo "GIT_USER_NAME: ${GIT_USER_NAME}"
+echo "GIT_USER_EMAIL: ${GIT_USER_EMAIL}"
+
+## Patterns:
+## GIT_USER_NAME: (?:^export\s+GIT_USER_NAME=['"])(\S+\s?\S+)(?:['"]\s?\n)
+## GIT_USER_EMAIL: (?:^export\s+GIT_USER_EMAIL=['"])(\S+)(?:['"]\s?\n)
+## PYTHON:
+## GIT_USER_NAME: r"(?:^export\s+GIT_USER_NAME=['\"](\S+\s?\S+)['\"]\s?\n)"gm
+
+```
+
+Now given the  file `trialsub.sh`, if you want to update the `GIT_USER_NAME` environment variable and redefine the file, you can use the following:
+
+```sh
+varsub() { (_TARGET_VARIABLE="${1:-GIT_USER_NAME}"; _NEWVAL="${3:-\$\{_${_TARGET_VARIABLE}\}}"; _FILEPATH="${2:-trialsub.sh}"; _DRYRUN=${4:+"--dryrun"}; _OLDLINE=$(varfetch "${_TARGET_VARIABLE}" "${_FILEPATH}"); _OLDVAL=$(echo "${_OLDLINE}" | cut -d "=" -f2 | xargs); _NEWLINE=$(echo "${_OLDLINE}" | sed -e "s/${_OLDVAL}/${_NEWVAL}/g"); if [[ "${_DRYRUN}" == "--dryrun" ]]; then echo -e "\n\t- OLDLINE: ${_OLDLINE}\t|  OLDVAL: ${_OLDVAL}\n\t- NEWLINE: ${_NEWLINE}\t|  NEWVAL: ${_NEWVAL}\n" | column -t; fi; _NEWCONTENT=$(cat "${_FILEPATH}" | sed -e "s/${_OLDLINE}/${_NEWLINE}/g"); echo -e "${_NEWCONTENT}"; unset _OLDVAL _NEWVAL _OLDLINE _NEWLINE _TARGET_VARIABLE _FILEPATH _DRYRUN _NEWCONTENT;); }
+```
+
+Usage: `varsub <ENV_VAR_NAME> <FILE_PATH> <ENV_VAR_VALUE> [--dryrun]`
+
+Example: 
+
+- regular use: `varsub GIT_USER_EMAIL ./trialsub.sh "Your.Name@workplace.com"`
+- dryrun use: `varsub GIT_USER_EMAIL ./trialsub.sh "Your.Name@workplace.com" --dryrun`
+
+### Method-2: `with python`
+
+Use python to define the exported environment variables.
+
+```sh
+_PKG='GIT_USER_NAME:"Your Name"|GIT_USER_EMAIL:"Your.Name@workplace.com"|USER_ALIAS="yourname"|USER_TEAM_NAME="smgrp"'
+exportvars() { (python3 -c "print('\n'.join(['export ' + e.strip().replace(':','=') for e in sorted('${_VAR_STRING:-${1}}'.split('|'))]))"); }
+```
+
+Usage: 
+
+```sh
+# Define Variable String:
+_VAR_STRING='GIT_USER_NAME:"Your Name"|GIT_USER_EMAIL:"Your.Name@workplace.com"|USER_ALIAS="yourname"|USER_TEAM_NAME="smgrp"'
+
+# Run exportvars with the variable string
+exportvars ${_VAR_STRING}
+
+## output:
+# export GIT_USER_EMAIL="Your.Name@workplace.com"
+# export GIT_USER_NAME="Your Name"
+# export USER_ALIAS="yourname"
+# export USER_TEAM_NAME="smgrp"
+```
+
+Then you can store these variables in a file and load it up while runnning `~/.bashrc` with `source ~/.bashrc`.

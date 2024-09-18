@@ -75,7 +75,7 @@
           ? - [ ] "GitHub Dark Default",
           ! - [4] "Solarized Dark",
     */
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
     // *Integrated terminal Font Family*:
     /*
         @@ field: "terminal.integrated.fontFamily"
